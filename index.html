@@ -233,7 +233,7 @@
 					class="portfolio-size"
 					data-category="住宅空間"
 					data-aos="zoom-in-up"
-					href="portfolio-1.html">
+					href="/portfolio-1.html">
 					<img
 						class="latest-work-portfolio"
 						src="./image/front cover/Portfolio-4/2J7A7668.jpg"
@@ -245,7 +245,6 @@
 				</a>
 			</div>
 		</div>
-
 		<div class="workflow-section" id="workflow">
 			<h2 class="workflow">工作流程</h2>
 			<div class="workflow__bg"></div>
@@ -552,6 +551,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		overflow-x: hidden;
 	}
 
 	.award-img img {
@@ -562,7 +562,7 @@
 
 	.design-project,
 	.workflow-section {
-		margin: 3rem auto;
+		margin: 3rem;
 	}
 
 	.portfolio-list {
@@ -570,7 +570,6 @@
 		font-weight: 400;
 		color: #0070d8;
 		padding: 1rem;
-		margin: 0;
 	}
 
 	.style-filter {
@@ -652,7 +651,6 @@
 		width: 75vw;
 		margin: 0 auto;
 		flex-wrap: wrap;
-		min-width: 1200px;
 	}
 
 	.portfolio-size {
@@ -906,6 +904,11 @@
 			width: 40vw;
 		}
 
+		.award-section {
+			width: 100vw;
+			min-width: 768px;
+		}
+
 		.latest-works {
 			min-width: 768px;
 		}
@@ -931,6 +934,13 @@
 			font-size: 1.3rem;
 		}
 
+		.award-section {
+			min-width: 480px;
+		}
+		.award-section p {
+			line-height: 1.1;
+		}
+
 		.latest-works {
 			min-width: 480px;
 		}
@@ -946,6 +956,14 @@
 			padding: 1.5rem 0;
 			text-align: center;
 			margin: 0 auto;
+		}
+
+		.award-section {
+			min-width: 370px;
+		}
+
+		.tabs {
+			padding: 1rem 10px;
 		}
 
 		.style-filter {
@@ -1013,8 +1031,8 @@
 			const styleFilterTop = header.offsetTop;
 			const headerHeight = header.offsetHeight;
 
-			const startThreshold = -20;
-			const endThreshold = 100;
+			const startThreshold = 0;
+			const endThreshold = 0;
 
 			let prevScrollY = window.scrollY;
 			let isSticky = false;
