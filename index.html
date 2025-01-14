@@ -11,6 +11,8 @@
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- abbr 效果 -->
+    <link rel="stylesheet" href="./abbr.css">
 		<!-- google fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +36,10 @@
 		<header>
 			<div class="company">
         <img class="sy-logo" src="./image/SY-logo.png" alt="" />
-				<a class="company-title" href="index.html">Shiuan Yuan</a>
+				<!-- <a class="company-title" href="index.html">Shiuan Yuan</a> -->
+        <div class="logo-box">
+          <abbr data-title="Shiuan Yuan">Shiuan Yuan</abbr>
+        </div>
 			</div>
 			<nav class="navbar">
 				<a class="nav-text" href="#design-project">
@@ -559,4 +564,25 @@
 	);
 
 	observer.observe(document.querySelector(".workflow-section"));
+</script>
+
+<!-- abbr -->
+<script>
+  let abbr = document.querySelector("abbr");
+  abbr.textContent = "";
+  let title = abbr.dataset.title;
+  let words = title.split(" ");
+  words.forEach(word => {
+    let [initial, ...restLetters] = word.split("");
+    let initialSpan = document.createElement("span");
+    initialSpan.textContent = initial;
+    initialSpan.className = "initial";
+    abbr.append(initialSpan);
+    restLetters.forEach(letter => {
+      let hiddenSpan = document.createElement("span");
+      hiddenSpan.textContent = letter;
+      hiddenSpan.className = "hidden";
+      abbr.append(hiddenSpan);
+    });
+  });
 </script>

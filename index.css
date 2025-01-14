@@ -23,6 +23,7 @@
 		padding-right: 2rem;
 		height: 70px;
 		transition: transform 0.5s;
+    backdrop-filter: blur(10px); /* 毛玻璃 */
 	}
 
 	header.invisible {
@@ -49,6 +50,17 @@
     height: auto;
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.9));
 	}
+
+  .logo-box {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 100%;
+    cursor: pointer;
+
+    &:hover {
+      border: none;
+    }
+  }
 
 	/* // <uniquifier>: Use a unique and descriptive class name */
   .company-title {
