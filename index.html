@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SY GROUP</title>
+		<!-- swiper輪播套件 -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pacifico&family=Tangerine:wght@400;700&family=Zen+Antique&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&family=Zen+Antique&display=swap"
+			rel="stylesheet" />
+
+		<!-- AOS -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<div class="company">
+				<img class="sy-logo" src="./image/SY-logo.png" alt="" />
+				<a class="company-title" href="index.html">Shiuan Yuan</a>
+			</div>
+			<nav class="navbar">
+				<a class="nav-text" href="#design-project">
+					portfolio
+					<!-- 設計作品 -->
+				</a>
+				<a class="nav-text" href="#workflow ">
+					workflow
+					<!-- 工作流程 -->
+				</a>
+				<a class="nav-text" href="#contant-us">
+					contact
+					<!-- 聯絡我們 -->
+				</a>
+			</nav>
+		</header>
+
+		<!-- Swiper -->
+		<div class="swiper mySwiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="./image/top-area/2J7A8692.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="./image/top-area/IMG_3183F.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="./image/top-area/IMG_3193.JPG" />
+				</div>
+				<div class="swiper-slide">
+					<img src="./image/top-area/IMG_3263.JPG" />
+				</div>
+			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+			<!-- <div class="swiper-pagination"></div> -->
+		</div>
+
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+		<!-- Initialize Swiper -->
+		<script>
+			var swiper = new Swiper(".mySwiper", {
+				spaceBetween: 30,
+				effect: "fade",
+				loop: true,
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				},
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				fadeEffect: {
+					crossFade: true,
+				},
+				speed: 1500,
+			});
+		</script>
+
+		<div
+			class="about-sy"
+			data-aos="fade-zoom-in"
+			data-aos-easing="ease-in-back"
+			data-aos-delay="300">
+			<div class="about-content">
+				<div data-aos="fade-up" data-aos-delay="300">關於萱源</div>
+				<p data-aos="fade-up" data-aos-delay="500">
+					萱，象徵溫暖與家的歸屬；源，代表創意的無盡起點。我們以人為本，注重傾聽與理解，致力於為每一個空間注入專屬的故事。透過融合實用與美感，打造兼具生活美學與功能性的理想空間，讓設計成為幸福的延伸。
+				</p>
+				<div data-aos="fade-up" data-aos-delay="300">萱源設計</div>
+				<p data-aos="fade-up" data-aos-delay="500">
+					誕生於對家的深厚情感與對生活美學的無限熱愛。我們相信，設計是一場對話，從每一個細節出發，與人、空間和時間溫柔對話。我們以創意與專業為核心，賦予空間更多的可能性，讓每一個設計作品都成為生活方式的精彩詮釋。
+				</p>
+			</div>
+		</div>
+
+		<div class="award-section">
+			<div class="tabs">
+				<input
+					type="radio"
+					class="tabs__radio"
+					name="tabs-example"
+					id="tab1"
+					checked />
+				<label for="tab1" class="tabs__label">2024</label>
+				<div class="tabs__content">
+					<p>2024 德國iF設計獎 IF Design Awards -設計獎</p>
+					<p>2024 柏林設計大獎 Berlin Design Awards -銀獎</p>
+					<p>2024 米蘭設計大獎 MILAN Design Awards -金獎</p>
+				</div>
+				<input type="radio" class="tabs__radio" name="tabs-example" id="tab2" />
+				<label for="tab2" class="tabs__label">2023</label>
+				<div class="tabs__content">
+					<p>2023 iF 國際設計大獎 -設計獎</p>
+					<p>2023 美國 MUSE Design Awards(美國繆斯設計獎) -白金獎</p>
+					<p>2023 DESIGN100 倫敦設計大獎 -金獎</p>
+					<p>2023 美國 TITAN泰坦地產設計大獎 -白金獎</p>
+					<p>2023 法國創新設計大獎 NOVUM Design Award (NDA) -金獎</p>
+					<p>2023 法國創新設計大獎 NOVUM Design Award (NDA) -金獎</p>
+					<p>2023 瑞士 BLT Built Design Awards -HONORABLE MENTION -佳作</p>
+				</div>
+				<input type="radio" class="tabs__radio" name="tabs-example" id="tab3" />
+				<label for="tab3" class="tabs__label">2022</label>
+				<div class="tabs__content">
+					<p>2022</p>
+					<p>2022</p>
+					<p>2022</p>
+					<p>2022</p>
+				</div>
+			</div>
+			<div class="award-img">
+				<img src="./image/award/arch_design_award.jpg" alt="" />
+				<img src="./image/award/muse.png" alt="" />
+				<img src="./image/award/if.png" alt="" />
+				<img src="./image/award/tid.png" alt="" />
+				<img src="./image/award/a_design_award.png" alt="" />
+			</div>
+		</div>
+
+		<div class="design-project" id="design-project">
+			<h2 class="portfolio-list">設計作品</h2>
+			<div class="style-filter">
+				<button
+					href="javascript: void(0)"
+					onclick="filterPortfolios('all')"
+					class="btn btn-selected">
+					全部
+				</button>
+				<button
+					href="javascript: void(0)"
+					onclick="filterPortfolios('住宅空間')"
+					class="btn">
+					住宅空間
+				</button>
+				<button
+					href="javascript: void(0)"
+					onclick="filterPortfolios('公共設計')"
+					class="btn">
+					公共設計
+				</button>
+				<button
+					href="javascript: void(0)"
+					onclick="filterPortfolios('樣品屋')"
+					class="btn">
+					樣品屋
+				</button>
+			</div>
+			<div class="latest-works">
+				<a
+					class="portfolio-size"
+					data-category="住宅空間"
+					data-aos="zoom-in-up"
+					href="/portfolio-1.html">
+					<img
+						class="latest-work-portfolio"
+						src="./image/front cover/Portfolio-1/2J7A6799.jpg"
+						alt="Portfolio 1" />
+					<div class="portfolio-name">
+						<p>大隱</p>
+						<p>Veiw more</p>
+					</div>
+				</a>
+				<a
+					class="portfolio-size"
+					data-category="樣品屋"
+					data-aos="zoom-in-up"
+					href="/portfolio-1.html">
+					<img
+						class="latest-work-portfolio"
+						src="./image/front cover/Portfolio-2/2J7A8464.jpg"
+						alt="Portfolio 2" />
+					<div class="portfolio-name">
+						<p>西門綻</p>
+						<p>Veiw more</p>
+					</div>
+				</a>
+				<a
+					class="portfolio-size"
+					data-category="公共設計"
+					data-aos="zoom-in-up"
+					href="/portfolio-1.html">
+					<img
+						class="latest-work-portfolio"
+						src="./image/front cover/Portfolio-3/IMG_3141.JPG"
+						alt="Portfolio 3" />
+					<div class="portfolio-name">
+						<p>東騰介</p>
+						<p>Veiw more</p>
+					</div>
+				</a>
+				<a
+					class="portfolio-size"
+					data-category="住宅空間"
+					data-aos="zoom-in-up"
+					href="/portfolio-1.html">
+					<img
+						class="latest-work-portfolio"
+						src="./image/front cover/Portfolio-4/2J7A7668.jpg"
+						alt="Portfolio 4" />
+					<div class="portfolio-name">
+						<p>國王雙子星</p>
+						<p>Veiw more</p>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="workflow-section" id="workflow">
+			<h2 class="workflow">工作流程</h2>
+			<div class="workflow__bg"></div>
+			<div class="workflow-item">
+				<div
+					class="workflow-item1"
+					data-aos="fade-right"
+					data-aos-delay="0"
+					data-aos-offset="30">
+					<img src="./image/workflow/item1.png" alt="" />
+					<p>需求訪談與目標設定</p>
+				</div>
+				<div class="workflow-content">
+					<div class="workflow-item-content" id="workflow-item1-content">
+						<p style="font-size: 2rem; font-weight: 600">需求訪談與目標設定</p>
+						<p>
+							在這一階段，我們將與客戶進行詳細的訪談，深入了解空間需求、生活習慣以及設計偏好，確定項目範圍與功能目標。通過溝通，釐清客戶對美感、功能性及預算的具體期望，為後續設計打下基礎。
+						</p>
+					</div>
+				</div>
+				<div
+					class="workflow-item2"
+					data-aos="fade-right"
+					data-aos-delay="600"
+					data-aos-offset="60">
+					<img src="./image/workflow/item2.png" alt="" />
+					<p>平面配置與概念討論</p>
+				</div>
+				<div class="workflow-content">
+					<div class="workflow-item-content" id="workflow-item2-content">
+						<p style="font-size: 2rem; font-weight: 600">
+							平面配置提案與概念討論
+						</p>
+						<p>
+							根據需求訪談的結果，我們提供初步的平面配置方案，包含空間分配、動線規劃及功能設置。並與客戶進行方向性討論，確認設計概念是否符合需求，同時蒐集意見以進一步優化配置方案。
+						</p>
+					</div>
+				</div>
+				<div class="workflow-item3" data-aos="fade-right" data-aos-delay="1000">
+					<img src="./image/workflow/item3.png" alt="" />
+					<p>設計合約簽訂</p>
+				</div>
+				<div class="workflow-content">
+					<div class="workflow-item-content" id="workflow-item3-content">
+						<p style="font-size: 2rem; font-weight: 600">設計合約簽訂</p>
+						<p>
+							確認平面配置與設計方向後，我們會與客戶簽訂設計合約，明確雙方的權利與義務，包括設計範圍、交付內容及時間安排等，以保障雙方的合作基礎。
+						</p>
+					</div>
+				</div>
+				<div class="workflow-item4" data-aos="fade-right" data-aos-delay="1400">
+					<img src="./image/workflow/item4.png" alt="" />
+					<p>空間3D視覺呈現</p>
+				</div>
+				<div class="workflow-content">
+					<div class="workflow-item-content" id="workflow-item4-content">
+						<p style="font-size: 2rem; font-weight: 600">空間3D視覺呈現</p>
+						<p>
+							在此階段，我們將通過3D視覺效果圖，真實呈現空間氛圍與設計細節，讓客戶能直觀感受未來空間的整體效果。這包括顏色搭配、材質運用及家具配置等細節，幫助客戶更具象化設計概念。
+						</p>
+					</div>
+				</div>
+				<div class="workflow-item5" data-aos="fade-right" data-aos-delay="1800">
+					<img src="./image/workflow/item5.png" alt="" />
+					<p>設計深化與材質確認</p>
+				</div>
+				<div class="workflow-content">
+					<div class="workflow-item-content" id="workflow-item5-content">
+						<p style="font-size: 2rem; font-weight: 600">設計深化與材質確認</p>
+						<p>
+							我們會根據客戶對3D方案的回饋，進一步優化設計細節，並進行材質樣品的確認。這包括地板、牆面、家具及燈具的材質選擇，確保整體風格一致且符合客戶預期。
+						</p>
+					</div>
+				</div>
+				<div class="workflow-item6" data-aos="fade-right" data-aos-delay="2200">
+					<img src="./image/workflow/item6.png" alt="" />
+					<p>施工預算與材質確認</p>
+				</div>
+				<div class="workflow-content">
+					<div class="workflow-item-content" id="workflow-item6-content">
+						<p style="font-size: 2rem; font-weight: 600">
+							施工預算編列與材質最終確認
+						</p>
+						<p>
+							經過材質與設計確認後，我們會依照最終設計方案編列施工預算，並與客戶討論各項目細節。此階段將完成對所有材質與家具的最終敲定，確保施工時無遺漏或額外成本。
+						</p>
+					</div>
+				</div>
+				<div class="workflow-item7" data-aos="fade-right" data-aos-delay="2600">
+					<img src="./image/workflow/item7.png" alt="" />
+					<p>施工圖與報價確認</p>
+				</div>
+				<div class="workflow-content">
+					<div class="workflow-item-content" id="workflow-item7-content">
+						<p style="font-size: 2rem; font-weight: 600">施工圖與報價確認</p>
+						<p>
+							我們將交付詳細的施工圖，包括水電配置、家具定位及結構圖等技術細節，並提供完整的報價單供客戶確認。此步驟確保施工方能準確理解設計要求，避免施工過程中的誤差。
+						</p>
+					</div>
+				</div>
+				<div class="workflow-item8" data-aos="fade-right" data-aos-delay="3000">
+					<img src="./image/workflow/item8.png" alt="" />
+					<p>施工監督與管理</p>
+				</div>
+				<div class="workflow-content">
+					<div class="workflow-item-content" id="workflow-item8-content">
+						<p style="font-size: 2rem; font-weight: 600">施工監督與專案管理</p>
+						<p>
+							在施工階段，我們將提供全程的專案管理與監督服務，確保工程按照設計方案執行，並即時解決現場問題。我們重視施工品質與細節，定期向客戶回報進度，確保最終成果完美呈現。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="contant-info" id="contant-us">
+			<p>萱源實業有限公司</p>
+			<p>02-2921-7363</p>
+			<p>新北市三重區同安東街4號</p>
+			<p>shiuanyuan1@gmail.com</p>
+		</div>
+	</body>
+</html>
+<style>
+	body {
+		background: #fff4f0;
+		margin: 0;
+		overflow-x: hidden;
+		font-family: "Poppins", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 1rem;
+	}
+
+	header {
+		background: #44444400;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100vw;
+		z-index: 100;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		box-sizing: border-box;
+		padding-right: 2rem;
+		height: 70px;
+		transition: transform 0.5s;
+	}
+
+	header.invisible {
+		opacity: 0;
+		transform: translateY(-100%);
+		transition: opacity 0.3s, transform 0.3s;
+	}
+
+	a,
+	p {
+		text-decoration: none;
+		line-height: 0.75;
+	}
+
+	.company {
+		display: flex;
+		align-items: center;
+	}
+
+	.sy-logo {
+		width: 70px;
+		height: 70px;
+	}
+
+	/* // <uniquifier>: Use a unique and descriptive class name */
+	.company-title {
+		font-weight: 400;
+		font-style: normal;
+		font-size: 2rem;
+		color: #111;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.company-title:hover {
+		color: #0070d8;
+	}
+
+	.nav-text {
+		font-weight: 400;
+		font-style: normal;
+		color: #2e2e2e;
+		font-size: 1.6rem;
+		padding: 0.2rem;
+	}
+
+	.nav-text:hover {
+		color: #b0b0b0;
+	}
+
+	.swiper-slide img {
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
+	}
+
+	.mySwiper .swiper-slide {
+		transition: opacity 1.5s ease-in-out;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		color: #d1d1d1;
+		opacity: 0.5;
+	}
+
+	.swiper-button-next:hover,
+	.swiper-button-prev:hover {
+		background-color: #f1f1f1;
+		color: #111;
+		opacity: 0.8;
+	}
+
+	.portfolio {
+		width: 80vw;
+		height: 80vh;
+		background-size: cover;
+		background-position: center;
+		transition: all 0.5s ease-in-out;
+		z-index: 1;
+		position: relative;
+	}
+
+	.about-content {
+		width: 34vw;
+		height: auto;
+	}
+
+	.about-sy {
+		margin: 4rem auto;
+		width: 70vw;
+		color: #111;
+		line-height: 1.5;
+		font-size: 1.8rem;
+		background-image: url(./image/about/2J7A7821.jpg);
+		background-size: cover;
+		height: 70vh;
+		padding: 1.5rem;
+		background-position: center;
+		text-shadow: 2px 2px 4px #fff;
+	}
+
+	.about-sy p {
+		line-height: 1.5;
+		font-size: 1.4rem;
+	}
+
+	.award-section {
+		margin: 4rem auto;
+		width: 75vw;
+		color: #2e2e2e;
+	}
+
+	.tabs {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 1rem 3rem;
+	}
+
+	.tabs__label {
+		padding: 10px 16px;
+		cursor: pointer;
+		color: #0070d8;
+	}
+
+	.tabs__radio {
+		display: none;
+	}
+
+	.tabs__content {
+		order: 1;
+		width: 100%;
+		line-height: 1.5;
+		font-size: 1rem;
+		display: none;
+		padding: 1rem 0;
+		border-top: 1px solid darkgray;
+	}
+
+	.tabs__content p {
+		margin: 0.8rem;
+	}
+
+	.tabs__radio:checked + .tabs__label {
+		font-weight: bold;
+		color: #003566;
+		border-bottom: 2px solid #003566;
+	}
+
+	.tabs__radio:checked + .tabs__label + .tabs__content {
+		display: initial;
+	}
+
+	.award-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.award-img img {
+		padding: 10px;
+		width: 60px;
+		height: 90px;
+	}
+
+	.design-project,
+	.workflow-section {
+		margin: 3rem auto;
+	}
+
+	.portfolio-list {
+		text-align: center;
+		font-weight: 400;
+		color: #0070d8;
+		padding: 1rem;
+		margin: 0;
+	}
+
+	.style-filter {
+		text-align: center;
+		padding: 1rem;
+		transition: padding 0.3s ease, background-color 0.3s ease,
+			box-shadow 0.3s ease;
+		background-color: #fff4f0;
+	}
+
+	.style-filter.sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: #fff4f0;
+		padding: 0.75rem 0;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		z-index: 99;
+	}
+
+	.style-filter.sticky.scrolled-up {
+		padding-top: 70px;
+		background-color: #fff4f0;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	}
+
+	.style-filter.sticky,
+	.style-filter.sticky.scrolled-up {
+		transition: padding 0.3s ease, background-color 0.3s ease,
+			box-shadow 0.3s ease;
+	}
+
+	.btn,
+	.btn:focus,
+	.btn:hover {
+		position: relative;
+		min-width: 100px;
+		border: 0;
+		background-color: #fff4f0;
+		color: gray;
+		font-size: 1rem;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		overflow: hidden;
+		transition: background 400ms;
+		padding: 10px 20px;
+	}
+	.btn:hover {
+		color: #003566;
+	}
+	.btn .ripple {
+		position: absolute;
+		border-radius: 50%;
+		transform: scale(0);
+		animation: anim 600ms linear;
+		background-color: rgba(255, 255, 255, 0.7);
+		user-select: none;
+		pointer-events: none;
+	}
+	@keyframes anim {
+		to {
+			transform: scale(4);
+			opacity: 0;
+		}
+	}
+
+	.btn-selected {
+		background-color: #fff4f0;
+		color: #2e2e2e;
+	}
+
+	.latest-works {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 75vw;
+		margin: 0 auto;
+		flex-wrap: wrap;
+		min-width: 1200px;
+	}
+
+	.portfolio-size {
+		width: 45%;
+		margin: 1.5rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.latest-work-portfolio {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.portfolio-name {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 10;
+		background-color: rgba(216, 222, 233, 0.85);
+		color: #005a9c;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		font-size: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		box-sizing: border-box;
+	}
+
+	.portfolio-size:hover .portfolio-name {
+		opacity: 0.9;
+	}
+
+	.workflow-section {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		position: relative;
+		background-color: #fff4f0;
+		color: #2e2e2e;
+		font-family: "Poppins", sans-serif;
+	}
+
+	.workflow {
+		text-align: center;
+		font-weight: 400;
+		color: #0070d8;
+	}
+
+	.workflow__bg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+		height: 90%;
+		background-image: url("./image/workflow/workflow-bg.png");
+		background-size: cover;
+		background-position: center;
+		opacity: 0;
+		clip-path: polygon(0% 100%, 0% 100%, 0% 100%);
+		transition: opacity 0.5s ease-out;
+	}
+
+	.workflow__bg.animate {
+		opacity: 1;
+		animation: revealEffect 4s ease-out forwards;
+	}
+
+	@keyframes revealEffect {
+		0% {
+			clip-path: polygon(0% 100%, 0% 100%, 0% 100%);
+		}
+		100% {
+			clip-path: polygon(0% 100%, 100% 100%, 100% 0%);
+		}
+	}
+
+	.workflow-item {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.workflow-item div {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		position: absolute;
+	}
+
+	.workflow-item img {
+		width: 4.5rem;
+		height: 4.5rem;
+		transform: scale(1, 1);
+		transition: all 0.5s ease-out;
+	}
+
+	.workflow-item1:hover img,
+	.workflow-item2:hover img,
+	.workflow-item3:hover img,
+	.workflow-item4:hover img,
+	.workflow-item5:hover img,
+	.workflow-item6:hover img,
+	.workflow-item7:hover img,
+	.workflow-item8:hover img {
+		transform: scale(1.4, 1.4);
+	}
+
+	.workflow-item p {
+		font-size: 1.4rem;
+		line-height: 1.2;
+	}
+
+	.workflow-item1 {
+		top: 87%;
+		left: 11%;
+		cursor: pointer;
+	}
+
+	.workflow-content {
+		top: 25%;
+		left: 45%;
+		text-align: left;
+		font-size: 1.8rem;
+	}
+
+	.workflow-item1 p,
+	.workflow-item2 p,
+	.workflow-item3 p,
+	.workflow-item4 p,
+	.workflow-item5 p,
+	.workflow-item6 p,
+	.workflow-item7 p,
+	.workflow-item8 p {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+	}
+
+	.workflow-item1:hover p,
+	.workflow-item2:hover p,
+	.workflow-item3:hover p,
+	.workflow-item4:hover p,
+	.workflow-item5:hover p,
+	.workflow-item6:hover p,
+	.workflow-item7:hover p,
+	.workflow-item8:hover p {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.workflow-item-content {
+		width: 30vw;
+		font-size: 1.4rem;
+	}
+
+	#workflow-item1-content,
+	#workflow-item2-content,
+	#workflow-item3-content,
+	#workflow-item4-content,
+	#workflow-item5-content,
+	#workflow-item6-content,
+	#workflow-item7-content,
+	#workflow-item8-content {
+		display: block;
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	.workflow-item1:hover + .workflow-content #workflow-item1-content,
+	.workflow-item2:hover + .workflow-content #workflow-item2-content,
+	.workflow-item3:hover + .workflow-content #workflow-item3-content,
+	.workflow-item4:hover + .workflow-content #workflow-item4-content,
+	.workflow-item5:hover + .workflow-content #workflow-item5-content,
+	.workflow-item6:hover + .workflow-content #workflow-item6-content,
+	.workflow-item7:hover + .workflow-content #workflow-item7-content,
+	.workflow-item8:hover + .workflow-content #workflow-item8-content {
+		display: block;
+		opacity: 1;
+	}
+
+	.workflow-item2 {
+		top: 75%;
+		left: 17.5%;
+		cursor: pointer;
+	}
+
+	.workflow-item3 {
+		top: 63.5%;
+		left: 29.7%;
+		cursor: pointer;
+	}
+
+	.workflow-item4 {
+		top: 52%;
+		left: 36%;
+		cursor: pointer;
+	}
+
+	.workflow-item5 {
+		top: 40.5%;
+		left: 42%;
+		cursor: pointer;
+	}
+
+	.workflow-item6 {
+		top: 29%;
+		left: 50.5%;
+		cursor: pointer;
+	}
+
+	.workflow-item7 {
+		top: 17.5%;
+		left: 60.5%;
+		cursor: pointer;
+	}
+
+	.workflow-item8 {
+		top: 6%;
+		left: 70%;
+		cursor: pointer;
+	}
+
+	.contant-info {
+		font-family: "Poppins", sans-serif;
+		font-size: 1.2rem;
+		font-weight: 300;
+		box-sizing: border-box;
+		height: 25vh;
+		width: 100%;
+		text-align: center;
+		padding: 2rem;
+		background-color: #2e2e2e;
+		color: #b0b0b0;
+	}
+
+	@media screen and (max-width: 1199px) {
+		.about-sy {
+			width: 100vw;
+			font-size: 1.8rem;
+			min-width: 768px;
+			min-height: 600px;
+		}
+
+		.about-content {
+			width: 40vw;
+		}
+
+		.latest-works {
+			min-width: 768px;
+		}
+
+		.portfolio-size {
+			width: 600px;
+			margin: 1rem;
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		.about-sy {
+			font-size: 1.6rem;
+			min-width: 370px;
+		}
+
+		.about-content {
+			width: 50vw;
+			padding: 2.5rem;
+		}
+
+		.about-sy p {
+			font-size: 1.3rem;
+		}
+
+		.latest-works {
+			min-width: 480px;
+		}
+
+		.portfolio-size {
+			width: 90vw;
+		}
+	}
+
+	@media screen and (max-width: 479px) {
+		.about-content {
+			width: 80vw;
+			padding: 1.5rem 0;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		.style-filter {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		.btn {
+			width: 34%;
+		}
+
+		.latest-works {
+			min-width: 370px;
+		}
+	}
+
+	@media screen and (max-width: 380px) {
+		.about-content {
+			padding: 1rem 10px;
+		}
+	}
+</style>
+
+<script>
+	// 隱藏header並在滾動至底部時顯示
+	(function () {
+		let prevPos = 0;
+		const header = document.querySelector("header");
+		if (!header) return;
+		let throttleTimeout;
+
+		const getDocHeight = () => document.documentElement.scrollHeight;
+		const getWinHeight = () => window.innerHeight;
+
+		window.addEventListener("scroll", function () {
+			if (throttleTimeout) return;
+
+			throttleTimeout = setTimeout(() => {
+				const currPos = Math.max(0, window.pageYOffset);
+
+				const isAtBottom = currPos + getWinHeight() >= getDocHeight() - 10;
+
+				if (isAtBottom) {
+					header.classList.remove("invisible");
+				} else {
+					const status = currPos > prevPos && currPos > header.offsetHeight;
+					header.classList[status ? "add" : "remove"]("invisible");
+				}
+
+				prevPos = currPos;
+				throttleTimeout = null;
+			}, 100);
+		});
+	})();
+</script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const header = document.querySelector(".style-filter");
+		const targetSection = document.querySelector("#design-project");
+
+		if (header && targetSection) {
+			const styleFilterTop = header.offsetTop;
+			const headerHeight = header.offsetHeight;
+
+			const startThreshold = -20;
+			const endThreshold = 100;
+
+			let prevScrollY = window.scrollY;
+			let isSticky = false;
+			let isScrolledUp = false;
+			let isWithinStickyRange = false;
+
+			let lastKnownScrollY = window.scrollY;
+			let ticking = false;
+
+			const updateStickyState = () => {
+				const scrollY = lastKnownScrollY;
+
+				const targetSectionBottom =
+					targetSection.offsetTop + targetSection.offsetHeight - endThreshold;
+
+				const isNowWithinStickyRange =
+					scrollY > styleFilterTop - startThreshold &&
+					scrollY < targetSectionBottom - headerHeight;
+
+				if (isNowWithinStickyRange !== isWithinStickyRange) {
+					isWithinStickyRange = isNowWithinStickyRange;
+					if (!isWithinStickyRange) {
+						header.classList.remove("sticky", "scrolled-up");
+						isSticky = false;
+						isScrolledUp = false;
+					}
+				}
+
+				if (isWithinStickyRange && !isSticky) {
+					isSticky = true;
+					header.classList.add("sticky");
+				} else if (!isWithinStickyRange && isSticky) {
+					isSticky = false;
+				}
+
+				if (isWithinStickyRange) {
+					const isScrollingUp = scrollY < prevScrollY;
+					if (isScrollingUp !== isScrolledUp) {
+						isScrolledUp = isScrollingUp;
+						header.classList.toggle("scrolled-up", isScrolledUp);
+					}
+				}
+
+				prevScrollY = scrollY;
+				ticking = false;
+			};
+
+			window.addEventListener("scroll", () => {
+				lastKnownScrollY = window.scrollY;
+
+				if (!ticking) {
+					ticking = true;
+					requestAnimationFrame(updateStickyState);
+				}
+			});
+		}
+	});
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init({
+		duration: 1800,
+	});
+	document.querySelectorAll(".portfolio-size").forEach((element, index) => {
+		element.setAttribute("data-aos-delay", index * 300);
+	});
+</script>
+
+<script>
+	// style-filter btn漣漪效果邏輯
+	window.onload = () => {
+		const buttons = document.querySelectorAll(".btn");
+		buttons.forEach((button) => {
+			button.addEventListener("click", (event) => {
+				const circle = document.createElement("span");
+				const diameter = Math.max(button.clientWidth, button.clientHeight);
+				const radius = diameter / 2;
+
+				circle.style.width = circle.style.height = `${diameter}px`;
+				circle.style.left = `${event.offsetX - radius}px`;
+				circle.style.top = `${event.offsetY - radius}px`;
+				circle.classList.add("ripple");
+
+				const ripple = button.querySelector(".ripple");
+				if (ripple) {
+					ripple.remove();
+				}
+
+				button.appendChild(circle);
+			});
+		});
+	};
+
+	// style-filter btn 顯示分類
+	function filterPortfolios(category) {
+		const portfolios = document.querySelectorAll(".portfolio-size");
+		const buttons = document.querySelectorAll(".style-filter .btn");
+
+		portfolios.forEach((portfolio) => {
+			const portfolioCategory = portfolio.getAttribute("data-category");
+
+			if (category === "all" || portfolioCategory === category) {
+				portfolio.style.display = "block";
+			} else {
+				portfolio.style.display = "none";
+			}
+		});
+
+		buttons.forEach((button) => {
+			button.classList.remove("btn-selected");
+		});
+
+		const selectedButton = document.querySelector(
+			`.style-filter .btn[onclick="filterPortfolios('${category}')"]`
+		);
+		if (selectedButton) {
+			selectedButton.classList.add("btn-selected");
+		}
+	}
+</script>
+
+<!-- workflow 背景圖片顯示動畫  -->
+<script>
+	const background = document.querySelector(".workflow__bg");
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					background.classList.add("animate");
+				} else {
+					background.classList.remove("animate");
+				}
+			});
+		},
+		{
+			root: null,
+			threshold: 0.5,
+		}
+	);
+
+	observer.observe(document.querySelector(".workflow-section"));
+</script>

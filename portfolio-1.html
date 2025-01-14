@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SY GROUP / 大隱</title>
+		<!-- swiper輪播套件 -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pacifico&family=Tangerine:wght@400;700&family=Zen+Antique&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&family=Zen+Antique&display=swap"
+			rel="stylesheet" />
+
+		<!-- AOS -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<div class="company">
+				<img class="sy-logo" src="./image/SY-logo.png" alt="" />
+				<a class="company-title" href="index.html">Shiuan Yuan</a>
+			</div>
+			<nav class="navbar">
+				<a class="nav-text" href="#design-project">
+					portfolio
+					<!-- 設計作品 -->
+				</a>
+				<a class="nav-text" href="#workflow ">
+					workflow
+					<!-- 工作流程 -->
+				</a>
+				<a class="nav-text" href="#contant-us">
+					contact
+					<!-- 聯絡我們 -->
+				</a>
+			</nav>
+		</header>
+
+		<div class="project">
+			<div class="">
+				<h2 class="project-name">大隱</h2>
+				<h3 class="project-type">住宅空間</h3>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6799.jpg"
+						alt=""
+						onclick="openSwiper(0)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6883.jpg"
+						alt=""
+						onclick="openSwiper(1)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6785.jpg"
+						alt=""
+						onclick="openSwiper(2)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6802.jpg"
+						alt=""
+						onclick="openSwiper(3)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6806.jpg"
+						alt=""
+						onclick="openSwiper(4)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6810.jpg"
+						alt=""
+						onclick="openSwiper(5)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6853.jpg"
+						alt=""
+						onclick="openSwiper(6)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6795.jpg"
+						alt=""
+						onclick="openSwiper(7)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6875.jpg"
+						alt=""
+						onclick="openSwiper(8)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6884.jpg"
+						alt=""
+						onclick="openSwiper(9)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6856.jpg"
+						alt=""
+						onclick="openSwiper(10)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6859.jpg"
+						alt=""
+						onclick="openSwiper(11)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6860.jpg"
+						alt=""
+						onclick="openSwiper(12)" />
+				</div>
+				<div class="image-container">
+					<img
+						src="./image/front cover/Portfolio-1/2J7A6864.jpg"
+						alt=""
+						onclick="openSwiper(13)" />
+				</div>
+			</div>
+		</div>
+
+		<div class="design-project" id="design-project">
+			<h2 class="portfolio-list">其他作品</h2>
+			<div class="style-filter">
+				<button
+					href="javascript: void(0)"
+					onclick="filterPortfolios('all')"
+					class="btn btn-selected">
+					全部
+				</button>
+				<button
+					href="javascript: void(0)"
+					onclick="filterPortfolios('住宅空間')"
+					class="btn">
+					住宅空間
+				</button>
+				<button
+					href="javascript: void(0)"
+					onclick="filterPortfolios('公共設計')"
+					class="btn">
+					公共設計
+				</button>
+				<button
+					href="javascript: void(0)"
+					onclick="filterPortfolios('樣品屋')"
+					class="btn">
+					樣品屋
+				</button>
+			</div>
+			<div class="latest-works">
+				<a
+					class="portfolio-size"
+					data-category="住宅空間"
+					data-aos="zoom-in-up"
+					href="/portfolio-1.html">
+					<img
+						class="latest-work-portfolio"
+						src="./image/front cover/Portfolio-1/2J7A6799.jpg"
+						alt="Portfolio 1" />
+					<div class="portfolio-name">
+						<p>大隱</p>
+						<p>Veiw more</p>
+					</div>
+				</a>
+				<a
+					class="portfolio-size"
+					data-category="樣品屋"
+					data-aos="zoom-in-up"
+					href="/portfolio-1.html">
+					<img
+						class="latest-work-portfolio"
+						src="./image/front cover/Portfolio-2/2J7A8464.jpg"
+						alt="Portfolio 2" />
+					<div class="portfolio-name">
+						<p>西門綻</p>
+						<p>Veiw more</p>
+					</div>
+				</a>
+				<a
+					class="portfolio-size"
+					data-category="公共設計"
+					data-aos="zoom-in-up"
+					href="/portfolio-1.html">
+					<img
+						class="latest-work-portfolio"
+						src="./image/front cover/Portfolio-3/IMG_3141.JPG"
+						alt="Portfolio 3" />
+					<div class="portfolio-name">
+						<p>東騰介</p>
+						<p>Veiw more</p>
+					</div>
+				</a>
+				<a
+					class="portfolio-size"
+					data-category="住宅空間"
+					data-aos="zoom-in-up"
+					href="/portfolio-1.html">
+					<img
+						class="latest-work-portfolio"
+						src="./image/front cover/Portfolio-4/2J7A7668.jpg"
+						alt="Portfolio 4" />
+					<div class="portfolio-name">
+						<p>國王雙子星</p>
+						<p>Veiw more</p>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="contant-info" id="contant-us">
+			<p>萱源實業有限公司</p>
+			<p>02-2921-7363</p>
+			<p>新北市三重區同安東街4號</p>
+			<p>shiuanyuan1@gmail.com</p>
+		</div>
+
+		<!-- Swiper -->
+		<div class="swiper-overlay" id="swiperOverlay" style="display: none">
+			<div class="swiper mySwiper2">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6799.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6883.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6785.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6802.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6806.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6810.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6853.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6795.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6875.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6884.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6856.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6859.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6860.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6864.jpg" />
+					</div>
+				</div>
+				<h2 class="swiper-portfolio-name">大隱</h2>
+			</div>
+			<div thumbsSlider="" class="swiper mySwiper">
+				<div class="swiper-pagination"></div>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6799.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6883.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6785.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6802.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6806.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6810.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6853.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6795.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6875.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6884.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6856.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6859.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6860.jpg" />
+					</div>
+					<div class="swiper-slide">
+						<img src="./image/front cover/Portfolio-1/2J7A6864.jpg" />
+					</div>
+				</div>
+			</div>
+			<button class="close-slider-btn" onclick="closeSwiper()">close ╳</button>
+		</div>
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+		<!-- Initialize Swiper -->
+		<script>
+			let swiperThumbs; // 定義在全域範圍，避免重複初始化
+			let swiperMain;
+
+			function openSwiper(index) {
+				document.getElementById("swiperOverlay").style.display = "flex";
+
+				// 如果 Swiper 已經初始化，僅更新 active slide
+				if (swiperMain && swiperThumbs) {
+					swiperMain.params.grabCursor = true;
+					console.log(swiperMain.params);
+					swiperMain.slideToLoop(index); // 跳轉到指定索引
+					return;
+				}
+
+				// 縮略圖區域的 Swiper
+				swiperThumbs = new Swiper(".mySwiper", {
+					spaceBetween: 10,
+					slidesPerView: 4,
+					freeMode: true,
+					watchSlidesProgress: true,
+				});
+
+				// 主要展示區域的 Swiper
+				swiperMain = new Swiper(".mySwiper2", {
+					effect: "cube",
+					spaceBetween: 10,
+					loop: true,
+					initialSlide: index,
+					simulateTouch: true, // 啟用滑鼠拖曳
+					allowTouchMove: true, // 允許手勢滑動換圖
+					grabCursor: true, // 在滑鼠上顯示抓取樣式，確認滑鼠作用
+					autoplay: {
+						delay: 4000,
+						disableOnInteraction: false,
+					},
+					speed: 1500,
+					cubeEffect: {
+						shadow: true,
+						slideShadows: true,
+						shadowOffset: 20,
+						shadowScale: 0.94,
+					},
+					pagination: {
+						el: ".swiper-pagination",
+						type: "progressbar",
+					},
+					thumbs: {
+						swiper: swiperThumbs, // 連接縮略圖 Swiper
+					},
+				});
+			}
+
+			function closeSwiper() {
+				document.getElementById("swiperOverlay").style.display = "none";
+				if (swiperMain) swiperMain.slideTo(0); // 返回第一張，防止下次錯位
+			}
+		</script>
+	</body>
+</html>
+<style>
+	body {
+		background: #fff4f0;
+		margin: 0;
+		overflow-x: hidden;
+		font-family: "Poppins", sans-serif;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 1rem;
+	}
+
+	header {
+		background: #44444400;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100vw;
+		z-index: 100;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		box-sizing: border-box;
+		padding-right: 2rem;
+		height: 70px;
+		transition: transform 0.5s;
+	}
+
+	header.invisible {
+		opacity: 0;
+		transform: translateY(-100%);
+		transition: opacity 0.3s, transform 0.3s;
+	}
+
+	a,
+	p {
+		text-decoration: none;
+		line-height: 0.75;
+	}
+
+	.company {
+		display: flex;
+		align-items: center;
+	}
+
+	.sy-logo {
+		width: 70px;
+		height: 70px;
+	}
+
+	/* // <uniquifier>: Use a unique and descriptive class name */
+	.company-title {
+		font-weight: 400;
+		font-style: normal;
+		font-size: 2rem;
+		color: #111;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.company-title:hover {
+		color: #0070d8;
+	}
+
+	.nav-text {
+		font-weight: 400;
+		font-style: normal;
+		color: #2e2e2e;
+		font-size: 1.6rem;
+		padding: 0.2rem;
+	}
+
+	.nav-text:hover {
+		color: #b0b0b0;
+	}
+
+	.project-name {
+		text-align: center;
+		padding-top: 3.5rem;
+		font-size: 2rem;
+		color: #0070d8;
+		margin: 0;
+	}
+
+	.project-type {
+		text-align: center;
+		font-size: 1.4rem;
+		font-weight: 400;
+		color: #8e8e8e;
+		margin: 0;
+	}
+
+	.image-container {
+		width: 60vw;
+		/* height: auto; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #fff4f0;
+		margin: 3rem auto;
+	}
+
+	.image-container img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: cover;
+	}
+
+	/* .project img {
+		width: 100vw;
+		height: 100vh;
+	} */
+
+	.swiper-pagination-progressbar {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+
+	.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+		background-color: #ffe449; /* 進度條填充色 */
+		height: 2px;
+	}
+
+	.swiper {
+		width: 100%;
+		height: 100%;
+	}
+
+	.swiper-slide {
+		text-align: center;
+		background-color: #8e8e8e;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.swiper-slide img {
+		display: block;
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+	}
+
+	.swiper {
+		width: 100%;
+		height: 300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.mySwiper2 {
+		height: 80%;
+		width: 55%;
+	}
+
+	.mySwiper {
+		height: 20%;
+		box-sizing: border-box;
+		padding: 10px 0;
+		width: 55%;
+	}
+
+	.mySwiper .swiper-slide {
+		width: 25%;
+		height: 100%;
+		opacity: 0.4;
+	}
+
+	.mySwiper .swiper-slide-thumb-active {
+		opacity: 1;
+	}
+
+	.portfolio {
+		width: 80vw;
+		height: 80vh;
+		background-size: cover;
+		background-position: center;
+		transition: all 0.5s ease-in-out;
+		z-index: 1;
+		position: relative;
+	}
+
+	.design-project,
+	.workflow-section {
+		margin: 3rem;
+	}
+
+	.portfolio-list {
+		text-align: center;
+		font-weight: 400;
+		color: #0070d8;
+		padding: 1rem;
+	}
+
+	.style-filter {
+		text-align: center;
+		padding: 1rem;
+		transition: padding-top 0.3s ease, background-color 0.3s ease;
+	}
+
+	.style-filter.sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		background-color: #fff4f0;
+		transition: paddingTop 0.3s ease, background-color 0.3s ease;
+		padding: 0.75rem 0;
+		z-index: 99;
+	}
+
+	.style-filter.sticky.scrolled-up {
+		padding-top: 70px;
+		background-color: #fff4f0;
+	}
+
+	.style-filter.sticky,
+	.style-filter.sticky.scrolled-up {
+		transition: padding-top 0.3s ease, background-color 0.3s ease;
+	}
+
+	.btn,
+	.btn:focus,
+	.btn:hover {
+		position: relative;
+		min-width: 100px;
+		border: 0;
+		background-color: #fff4f0;
+		color: gray;
+		font-size: 1rem;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		overflow: hidden;
+		transition: background 400ms;
+		padding: 10px 20px;
+	}
+	.btn:hover {
+		color: #003566;
+	}
+	.btn .ripple {
+		position: absolute;
+		border-radius: 50%;
+		transform: scale(0);
+		animation: anim 600ms linear;
+		background-color: rgba(255, 255, 255, 0.7);
+		user-select: none;
+		pointer-events: none;
+	}
+	@keyframes anim {
+		to {
+			transform: scale(4);
+			opacity: 0;
+		}
+	}
+
+	.btn-selected {
+		background-color: #fff4f0;
+		color: #2e2e2e;
+	}
+
+	.latest-works {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 75vw;
+		margin: 0 auto;
+		flex-wrap: wrap;
+	}
+
+	.portfolio-size {
+		width: 45%;
+		margin: 1.5rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.latest-work-portfolio {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.portfolio-name {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 10;
+		background-color: rgba(216, 222, 233, 0.85);
+		color: #005a9c;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		font-size: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		box-sizing: border-box;
+	}
+
+	.portfolio-size:hover .portfolio-name {
+		opacity: 0.9;
+	}
+
+	.contant-info {
+		font-family: "Poppins", sans-serif;
+		font-size: 1.2rem;
+		font-weight: 300;
+		box-sizing: border-box;
+		height: 25vh;
+		width: 100%;
+		text-align: center;
+		padding: 2rem;
+		background-color: #2e2e2e;
+		color: #b0b0b0;
+	}
+
+	.swiper-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #2e2e2ef1;
+		z-index: 1000;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.close-slider-btn {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		background-color: #2e2e2e;
+		color: #fff;
+		border: none;
+		padding: 10px 15px;
+		font-size: 1rem;
+		cursor: pointer;
+		border-radius: 5px;
+	}
+
+	.close-slider-btn:hover {
+		color: red;
+	}
+
+	.swiper-portfolio-name {
+		text-align: center;
+		position: absolute;
+		bottom: 0;
+		left: 2rem;
+		z-index: 10;
+		font-size: 2rem;
+		font-weight: 400;
+		font-style: normal;
+		color: #fff;
+	}
+</style>
+
+<script>
+	// 隱藏header並在滾動至底部時顯示
+	(function () {
+		let prevPos = 0;
+		const header = document.querySelector("header");
+		if (!header) return;
+		let throttleTimeout;
+
+		const getDocHeight = () => document.documentElement.scrollHeight;
+		const getWinHeight = () => window.innerHeight;
+
+		window.addEventListener("scroll", function () {
+			if (throttleTimeout) return;
+
+			throttleTimeout = setTimeout(() => {
+				const currPos = Math.max(0, window.pageYOffset);
+
+				const isAtBottom = currPos + getWinHeight() >= getDocHeight() - 10;
+
+				if (isAtBottom) {
+					header.classList.remove("invisible");
+				} else {
+					const status = currPos > prevPos && currPos > header.offsetHeight;
+					header.classList[status ? "add" : "remove"]("invisible");
+				}
+
+				prevPos = currPos;
+				throttleTimeout = null;
+			}, 100);
+		});
+	})();
+</script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const header = document.querySelector(".style-filter");
+		const stopSection = document.querySelector(".workflow-section");
+
+		if (header && stopSection) {
+			const styleFilterTop =
+				header.getBoundingClientRect().top + window.scrollY;
+			const headerHeight = header.offsetHeight;
+			const threshold = 0;
+			let prevScrollY = 0;
+			let isSticky = false;
+			let prevShouldStick = false;
+
+			window.addEventListener("scroll", () => {
+				const scrollY = window.scrollY;
+				const stopSectionTop =
+					stopSection.getBoundingClientRect().top + scrollY;
+
+				const shouldStick =
+					scrollY > styleFilterTop - threshold &&
+					scrollY < stopSectionTop - headerHeight - threshold;
+
+				if (shouldStick !== prevShouldStick) {
+					if (shouldStick) {
+						header.classList.add("sticky");
+						isSticky = true;
+					} else {
+						header.classList.remove("sticky", "scrolled-up");
+						isSticky = false;
+					}
+				}
+
+				if (isSticky) {
+					if (scrollY > prevScrollY) {
+						header.classList.remove("scrolled-up");
+					} else {
+						header.classList.add("scrolled-up");
+					}
+				}
+
+				prevScrollY = scrollY;
+				prevShouldStick = shouldStick;
+			});
+		}
+	});
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+	AOS.init({
+		duration: 1800,
+	});
+	document.querySelectorAll(".portfolio-size").forEach((element, index) => {
+		element.setAttribute("data-aos-delay", index * 300);
+	});
+</script>
+
+<script>
+	window.onload = () => {
+		const buttons = document.querySelectorAll(".btn");
+		buttons.forEach((button) => {
+			button.addEventListener("click", (event) => {
+				const circle = document.createElement("span");
+				const diameter = Math.max(button.clientWidth, button.clientHeight);
+				const radius = diameter / 2;
+
+				circle.style.width = circle.style.height = `${diameter}px`;
+				circle.style.left = `${event.offsetX - radius}px`;
+				circle.style.top = `${event.offsetY - radius}px`;
+				circle.classList.add("ripple");
+
+				const ripple = button.querySelector(".ripple");
+				if (ripple) {
+					ripple.remove();
+				}
+
+				button.appendChild(circle);
+			});
+		});
+	};
+
+	function filterPortfolios(category) {
+		const portfolios = document.querySelectorAll(".portfolio-size");
+		const buttons = document.querySelectorAll(".style-filter .btn");
+
+		portfolios.forEach((portfolio) => {
+			const portfolioCategory = portfolio.getAttribute("data-category");
+
+			if (category === "all" || portfolioCategory === category) {
+				portfolio.style.display = "block";
+			} else {
+				portfolio.style.display = "none";
+			}
+		});
+
+		buttons.forEach((button) => {
+			button.classList.remove("btn-selected");
+		});
+
+		const selectedButton = document.querySelector(
+			`.style-filter .btn[onclick="filterPortfolios('${category}')"]`
+		);
+		if (selectedButton) {
+			selectedButton.classList.add("btn-selected");
+		}
+	}
+</script>
