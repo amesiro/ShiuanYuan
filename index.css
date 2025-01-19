@@ -314,7 +314,7 @@ a.company-title:hover {
 }
 
 .style-filter.sticky {
-	position: fixed;
+	/* position: fixed; */
 	top: 0;
 	left: 0;
 	right: 0;
@@ -439,6 +439,10 @@ a.company-title:hover {
 	background-color: #fff4f0;
 	color: #2e2e2e;
 	font-family: "Poppins", sans-serif;
+}
+
+#workflow {
+  overflow: hidden!important;
 }
 
 .workflow {
