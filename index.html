@@ -47,10 +47,10 @@
         <span></span>
       </button>
       <nav class="navbar">
-        <a class="nav-text" href="#design-project">portfolio</a>
-        <a class="nav-text" href="#workflow">workflow</a>
-        <a class="nav-text" href="#contact-us">contact</a>
-      </nav>
+        <div class="nav-text" data-target="#design-project">portfolio</div>
+        <div class="nav-text" data-target="#workflow">workflow</div>
+        <div class="nav-text" data-target="#contact-us">contact</div>
+      </nav>      
     </header>
     
 
@@ -365,7 +365,7 @@
 			</div>
 		</div>
 
-		<div class="contant-info" id="contant-us">
+		<div class="contant-info" id="contact-us">
 			<p>萱源實業有限公司</p>
 			<p>02-2921-7363</p>
 			<p>新北市三重區同安東街4號</p>
@@ -564,7 +564,7 @@
 </script>
 
 <!-- abbr -->
-<script>
+<!-- <script>
   let abbr = document.querySelector("abbr");
   abbr.textContent = "";
   let title = abbr.dataset.title;
@@ -582,7 +582,7 @@
       abbr.append(hiddenSpan);
     });
   });
-</script>
+</script> -->
 
 <!-- nav -->
 <script>
@@ -595,4 +595,22 @@
     hamburgerMenu.classList.toggle('active');
   });
 });
+</script>
+
+<script>
+  document.querySelectorAll('.nav-text').forEach(div => {
+  div.addEventListener('click', () => {
+    const targetId = div.getAttribute('data-target');
+    const targetElement = document.querySelector(targetId);
+    console.log('Current ---->>>>', targetElement, targetId)
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
 </script>

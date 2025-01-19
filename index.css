@@ -71,7 +71,7 @@ header.invisible {
     top: 70px; /* 與 header 高度一致 */
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9); /* 半透明背景 */
+    background: rgba(255, 255, 255, 0.4); /* 半透明背景 */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 1rem 0;
     z-index: 100;
@@ -213,18 +213,17 @@ a.company-title:hover {
 .about-content {
 	width: 34vw;
 	height: auto;
+  padding: 1.5rem;
 }
 
 .about-sy {
 	margin: 4rem auto;
-	width: 70vw;
 	color: #111;
 	line-height: 1.5;
 	font-size: 1.8rem;
 	background-image: url(./image/about/2J7A7821.jpg);
 	background-size: cover;
 	height: 70vh;
-	padding: 1.5rem;
 	background-position: center;
 	text-shadow: 2px 2px 4px #fff;
 }
@@ -993,9 +992,8 @@ a.company-title:hover {
 
 @media screen and (max-width: 1199px) {
 	.about-sy {
-		width: 100vw;
+		width: 100%;
 		font-size: 1.8rem;
-		min-width: 768px;
 		min-height: 600px;
 	}
 
@@ -1029,7 +1027,6 @@ a.company-title:hover {
 @media screen and (max-width: 767px) {
 	.about-sy {
 		font-size: 1.6rem;
-		min-width: 370px;
 	}
 
 	.about-content {
