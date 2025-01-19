@@ -73,34 +73,6 @@
 			<!-- <div class="swiper-pagination"></div> -->
 		</div>
 
-		<!-- Swiper JS -->
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-		<!-- Initialize Swiper -->
-		<script>
-			var swiper = new Swiper(".mySwiper", {
-				spaceBetween: 30,
-				effect: "fade",
-				loop: true,
-				autoplay: {
-					delay: 5000,
-					disableOnInteraction: false,
-				},
-				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
-				},
-				pagination: {
-					el: ".swiper-pagination",
-					clickable: true,
-				},
-				fadeEffect: {
-					crossFade: true,
-				},
-				speed: 1500,
-			});
-		</script>
-
 		<div
 			class="about-sy"
 			data-aos="fade-zoom-in"
@@ -251,7 +223,10 @@
 		<div id="workflow">
 			<div class="workflow-section" id="workflow">
 				<h2 class="workflow">工作流程</h2>
-				<div class="workflow__bg"></div>
+				<img
+					class="workflow__bg"
+					src="./image/workflow/workflow-bg.png"
+					alt="" />
 				<div class="workflow-item">
 					<div
 						class="workflow-item1"
@@ -388,7 +363,7 @@
 							<div data-aos="flip-left" class="timeline-image">
 								<img
 									class="rounded-circle img-fluid"
-									src="/image/workflow/item1.png"
+									src="./image/workflow/item1.png"
 									alt="..." />
 							</div>
 							<div class="timeline-panel">
@@ -406,7 +381,7 @@
 							<div data-aos="flip-right" class="timeline-image">
 								<img
 									class="rounded-circle img-fluid"
-									src="/image/workflow/item2.png"
+									src="./image/workflow/item2.png"
 									alt="..." />
 							</div>
 							<div class="timeline-panel">
@@ -424,7 +399,7 @@
 							<div data-aos="flip-left" class="timeline-image">
 								<img
 									class="rounded-circle img-fluid"
-									src="/image/workflow/item3.png"
+									src="./image/workflow/item3.png"
 									alt="..." />
 							</div>
 							<div class="timeline-panel">
@@ -443,7 +418,7 @@
 							<div data-aos="flip-right" class="timeline-image">
 								<img
 									class="rounded-circle img-fluid"
-									src="/image/workflow/item4.png"
+									src="./image/workflow/item4.png"
 									alt="..." />
 							</div>
 							<div class="timeline-panel">
@@ -462,7 +437,7 @@
 							<div data-aos="flip-left" class="timeline-image">
 								<img
 									class="rounded-circle img-fluid"
-									src="/image/workflow/item5.png"
+									src="./image/workflow/item5.png"
 									alt="..." />
 							</div>
 							<div class="timeline-panel">
@@ -481,7 +456,7 @@
 							<div data-aos="flip-right" class="timeline-image">
 								<img
 									class="rounded-circle img-fluid"
-									src="/image/workflow/item6.png"
+									src="./image/workflow/item6.png"
 									alt="..." />
 							</div>
 							<div class="timeline-panel">
@@ -500,7 +475,7 @@
 							<div data-aos="flip-left" class="timeline-image">
 								<img
 									class="rounded-circle img-fluid"
-									src="/image/workflow/item7.png"
+									src="./image/workflow/item7.png"
 									alt="..." />
 							</div>
 							<div class="timeline-panel">
@@ -519,7 +494,7 @@
 							<div data-aos="flip-right" class="timeline-image">
 								<img
 									class="rounded-circle img-fluid"
-									src="/image/workflow/item8.png"
+									src="./image/workflow/item8.png"
 									alt="..." />
 							</div>
 							<div class="timeline-panel">
@@ -579,6 +554,34 @@
 			}, 100);
 		});
 	})();
+</script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+	var swiper = new Swiper(".mySwiper", {
+		spaceBetween: 30,
+		effect: "fade",
+		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+		fadeEffect: {
+			crossFade: true,
+		},
+		speed: 1500,
+	});
 </script>
 
 <script>
