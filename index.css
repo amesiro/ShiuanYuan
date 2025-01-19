@@ -33,67 +33,66 @@ header.invisible {
 }
 
 .hamburger-menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 24px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 110;
-  margin-left: auto;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 24px;
+	height: 24px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	z-index: 110;
+	margin-left: auto;
 }
 
 .hamburger-menu span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #333;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #333;
+	transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .navbar {
-  display: flex;
-  gap: 1rem;
-  transition: all 0.3s ease-in-out;
+	display: flex;
+	gap: 1rem;
+	transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
-  .hamburger-menu {
-    display: flex;
-  }
+	.hamburger-menu {
+		display: flex;
+	}
 
-  .navbar {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px; /* 與 header 高度一致 */
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.4); /* 半透明背景 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem 0;
-    z-index: 100;
-  }
+	.navbar {
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 70px; /* 與 header 高度一致 */
+		left: 0;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.4); /* 半透明背景 */
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		padding: 1rem 0;
+		z-index: 100;
+	}
 
-  .navbar.active {
-    display: flex;
-  }
+	.navbar.active {
+		display: flex;
+	}
 
-  .hamburger-menu.active span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-  }
+	.hamburger-menu.active span:nth-child(1) {
+		transform: translateY(10px) rotate(45deg);
+	}
 
-  .hamburger-menu.active span:nth-child(2) {
-    opacity: 0;
-  }
+	.hamburger-menu.active span:nth-child(2) {
+		opacity: 0;
+	}
 
-  .hamburger-menu.active span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
-  }
+	.hamburger-menu.active span:nth-child(3) {
+		transform: translateY(-10px) rotate(-45deg);
+	}
 }
-
 
 a,
 p {
@@ -213,7 +212,7 @@ a.company-title:hover {
 .about-content {
 	width: 34vw;
 	height: auto;
-  padding: 1.5rem;
+	padding: 1.5rem;
 }
 
 .about-sy {
@@ -323,6 +322,7 @@ a.company-title:hover {
 	padding: 0.75rem 0;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	z-index: 99;
+	width: 100%;
 }
 
 .style-filter.sticky.scrolled-up {
@@ -998,7 +998,11 @@ a.company-title:hover {
 	}
 
 	.about-content {
-		width: 40vw;
+		width: 45vw;
+	}
+
+	.about-content p {
+		margin: 12px 0;
 	}
 
 	.award-section {
