@@ -4,10 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>SY GROUP / 大隱</title>
+		<link rel="icon" href="./image/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="./index.css" />
+
 		<!-- swiper輪播套件 -->
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<!-- abbr 效果 -->
+		<link rel="stylesheet" href="./abbr.css" />
 		<!-- google fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,113 +35,110 @@
 	<body>
 		<header>
 			<div class="company">
-				<img class="sy-logo" src="./image/SY-logo.png" alt="" />
+				<img class="sy-logo" src="./image/SY-logo.png" alt="SY Logo" />
 				<a class="company-title" href="index.html">Shiuan Yuan</a>
+				<div class="logo-box">
+					<abbr data-title="Shiuan Yuan">Shiuan Yuan</abbr>
+				</div>
 			</div>
+			<button class="hamburger-menu" aria-label="Toggle menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 			<nav class="navbar">
-				<a class="nav-text" href="#design-project">
-					portfolio
-					<!-- 設計作品 -->
-				</a>
-				<a class="nav-text" href="#workflow ">
-					workflow
-					<!-- 工作流程 -->
-				</a>
-				<a class="nav-text" href="#contant-us">
-					contact
-					<!-- 聯絡我們 -->
-				</a>
+				<div class="nav-text" data-target="#top">top</div>
+				<div class="nav-text" data-target="#design-project">portfolio</div>
+				<div class="nav-text" data-target="#contact-us">contact</div>
 			</nav>
 		</header>
 
-		<div class="project">
-			<div class="">
-				<h2 class="project-name">大隱</h2>
-				<h3 class="project-type">住宅空間</h3>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6799.jpg"
-						alt=""
-						onclick="openSwiper(0)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6883.jpg"
-						alt=""
-						onclick="openSwiper(1)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6785.jpg"
-						alt=""
-						onclick="openSwiper(2)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6802.jpg"
-						alt=""
-						onclick="openSwiper(3)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6806.jpg"
-						alt=""
-						onclick="openSwiper(4)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6810.jpg"
-						alt=""
-						onclick="openSwiper(5)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6853.jpg"
-						alt=""
-						onclick="openSwiper(6)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6795.jpg"
-						alt=""
-						onclick="openSwiper(7)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6875.jpg"
-						alt=""
-						onclick="openSwiper(8)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6884.jpg"
-						alt=""
-						onclick="openSwiper(9)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6856.jpg"
-						alt=""
-						onclick="openSwiper(10)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6859.jpg"
-						alt=""
-						onclick="openSwiper(11)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6860.jpg"
-						alt=""
-						onclick="openSwiper(12)" />
-				</div>
-				<div class="image-container">
-					<img
-						src="./image/front cover/Portfolio-1/2J7A6864.jpg"
-						alt=""
-						onclick="openSwiper(13)" />
-				</div>
+		<div class="project" id="top">
+			<h2 class="project-name">大隱</h2>
+			<h3 class="project-type">住宅空間</h3>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6799.jpg"
+					alt=""
+					onclick="openSwiper(0)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6883.jpg"
+					alt=""
+					onclick="openSwiper(1)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6785.jpg"
+					alt=""
+					onclick="openSwiper(2)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6802.jpg"
+					alt=""
+					onclick="openSwiper(3)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6806.jpg"
+					alt=""
+					onclick="openSwiper(4)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6810.jpg"
+					alt=""
+					onclick="openSwiper(5)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6853.jpg"
+					alt=""
+					onclick="openSwiper(6)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6795.jpg"
+					alt=""
+					onclick="openSwiper(7)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6875.jpg"
+					alt=""
+					onclick="openSwiper(8)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6884.jpg"
+					alt=""
+					onclick="openSwiper(9)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6856.jpg"
+					alt=""
+					onclick="openSwiper(10)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6859.jpg"
+					alt=""
+					onclick="openSwiper(11)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6860.jpg"
+					alt=""
+					onclick="openSwiper(12)" />
+			</div>
+			<div class="image-container">
+				<img
+					src="./image/front cover/Portfolio-1/2J7A6864.jpg"
+					alt=""
+					onclick="openSwiper(13)" />
 			</div>
 		</div>
 
@@ -228,7 +230,7 @@
 			</div>
 		</div>
 
-		<div class="contant-info" id="contant-us">
+		<div class="contant-info" id="contact-us">
 			<p>萱源實業有限公司</p>
 			<p>02-2921-7363</p>
 			<p>新北市三重區同安東街4號</p>
@@ -333,182 +335,14 @@
 			</div>
 			<button class="close-slider-btn" onclick="closeSwiper()">close ╳</button>
 		</div>
-		<!-- Swiper JS -->
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-		<!-- Initialize Swiper -->
-		<script>
-			let swiperThumbs; // 定義在全域範圍，避免重複初始化
-			let swiperMain;
-
-			function openSwiper(index) {
-				document.getElementById("swiperOverlay").style.display = "flex";
-
-				// 如果 Swiper 已經初始化，僅更新 active slide
-				if (swiperMain && swiperThumbs) {
-					swiperMain.params.grabCursor = true;
-					console.log(swiperMain.params);
-					swiperMain.slideToLoop(index); // 跳轉到指定索引
-					return;
-				}
-
-				// 縮略圖區域的 Swiper
-				swiperThumbs = new Swiper(".mySwiper", {
-					spaceBetween: 10,
-					slidesPerView: 4,
-					freeMode: true,
-					watchSlidesProgress: true,
-				});
-
-				// 主要展示區域的 Swiper
-				swiperMain = new Swiper(".mySwiper2", {
-					effect: "cube",
-					spaceBetween: 10,
-					loop: true,
-					initialSlide: index,
-					simulateTouch: true, // 啟用滑鼠拖曳
-					allowTouchMove: true, // 允許手勢滑動換圖
-					grabCursor: true, // 在滑鼠上顯示抓取樣式，確認滑鼠作用
-					autoplay: {
-						delay: 4000,
-						disableOnInteraction: false,
-					},
-					speed: 1500,
-					cubeEffect: {
-						shadow: true,
-						slideShadows: true,
-						shadowOffset: 20,
-						shadowScale: 0.94,
-					},
-					pagination: {
-						el: ".swiper-pagination",
-						type: "progressbar",
-					},
-					thumbs: {
-						swiper: swiperThumbs, // 連接縮略圖 Swiper
-					},
-				});
-			}
-
-			function closeSwiper() {
-				document.getElementById("swiperOverlay").style.display = "none";
-				if (swiperMain) swiperMain.slideTo(0); // 返回第一張，防止下次錯位
-			}
-		</script>
 	</body>
 </html>
 <style>
-	body {
-		background: #fff4f0;
-		margin: 0;
-		overflow-x: hidden;
-		font-family: "Poppins", sans-serif;
-		font-weight: 400;
-		font-style: normal;
-		font-size: 1rem;
-	}
-
-	header {
-		background: #44444400;
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		width: 100vw;
-		z-index: 100;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		box-sizing: border-box;
-		padding-right: 2rem;
-		height: 70px;
-		transition: transform 0.5s;
-	}
-
-	header.invisible {
-		opacity: 0;
-		transform: translateY(-100%);
-		transition: opacity 0.3s, transform 0.3s;
-	}
-
-	a,
-	p {
-		text-decoration: none;
-		line-height: 0.75;
-	}
-
-	.company {
-		display: flex;
-		align-items: center;
-	}
-
-	.sy-logo {
-		width: 70px;
-		height: 70px;
-	}
-
-	/* // <uniquifier>: Use a unique and descriptive class name */
-	.company-title {
-		font-weight: 400;
-		font-style: normal;
-		font-size: 2rem;
-		color: #111;
-		display: inline-block;
-		vertical-align: top;
-	}
-
-	.company-title:hover {
-		color: #0070d8;
-	}
-
-	.nav-text {
-		font-weight: 400;
-		font-style: normal;
-		color: #2e2e2e;
-		font-size: 1.6rem;
-		padding: 0.2rem;
-	}
-
-	.nav-text:hover {
-		color: #b0b0b0;
-	}
-
-	.project-name {
-		text-align: center;
-		padding-top: 3.5rem;
-		font-size: 2rem;
-		color: #0070d8;
-		margin: 0;
-	}
-
-	.project-type {
-		text-align: center;
-		font-size: 1.4rem;
-		font-weight: 400;
-		color: #8e8e8e;
-		margin: 0;
-	}
-
-	.image-container {
-		width: 60vw;
-		/* height: auto; */
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: #fff4f0;
-		margin: 3rem auto;
-	}
-
 	.image-container img {
 		max-width: 100%;
 		max-height: 100%;
 		object-fit: cover;
 	}
-
-	/* .project img {
-		width: 100vw;
-		height: 100vh;
-	} */
 
 	.swiper-pagination-progressbar {
 		background-color: rgba(0, 0, 0, 0.3);
@@ -549,6 +383,7 @@
 	.mySwiper2 {
 		height: 80%;
 		width: 55%;
+		min-width: 960px;
 	}
 
 	.mySwiper {
@@ -556,6 +391,7 @@
 		box-sizing: border-box;
 		padding: 10px 0;
 		width: 55%;
+		min-width: 960px;
 	}
 
 	.mySwiper .swiper-slide {
@@ -566,154 +402,6 @@
 
 	.mySwiper .swiper-slide-thumb-active {
 		opacity: 1;
-	}
-
-	.portfolio {
-		width: 80vw;
-		height: 80vh;
-		background-size: cover;
-		background-position: center;
-		transition: all 0.5s ease-in-out;
-		z-index: 1;
-		position: relative;
-	}
-
-	.design-project,
-	.workflow-section {
-		margin: 3rem;
-	}
-
-	.portfolio-list {
-		text-align: center;
-		font-weight: 400;
-		color: #0070d8;
-		padding: 1rem;
-	}
-
-	.style-filter {
-		text-align: center;
-		padding: 1rem;
-		transition: padding-top 0.3s ease, background-color 0.3s ease;
-	}
-
-	.style-filter.sticky {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		width: 100%;
-		background-color: #fff4f0;
-		transition: paddingTop 0.3s ease, background-color 0.3s ease;
-		padding: 0.75rem 0;
-		z-index: 99;
-	}
-
-	.style-filter.sticky.scrolled-up {
-		padding-top: 70px;
-		background-color: #fff4f0;
-	}
-
-	.style-filter.sticky,
-	.style-filter.sticky.scrolled-up {
-		transition: padding-top 0.3s ease, background-color 0.3s ease;
-	}
-
-	.btn,
-	.btn:focus,
-	.btn:hover {
-		position: relative;
-		min-width: 100px;
-		border: 0;
-		background-color: #fff4f0;
-		color: gray;
-		font-size: 1rem;
-		font-weight: bold;
-		text-align: center;
-		text-decoration: none;
-		text-transform: uppercase;
-		overflow: hidden;
-		transition: background 400ms;
-		padding: 10px 20px;
-	}
-	.btn:hover {
-		color: #003566;
-	}
-	.btn .ripple {
-		position: absolute;
-		border-radius: 50%;
-		transform: scale(0);
-		animation: anim 600ms linear;
-		background-color: rgba(255, 255, 255, 0.7);
-		user-select: none;
-		pointer-events: none;
-	}
-	@keyframes anim {
-		to {
-			transform: scale(4);
-			opacity: 0;
-		}
-	}
-
-	.btn-selected {
-		background-color: #fff4f0;
-		color: #2e2e2e;
-	}
-
-	.latest-works {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 75vw;
-		margin: 0 auto;
-		flex-wrap: wrap;
-	}
-
-	.portfolio-size {
-		width: 45%;
-		margin: 1.5rem;
-		position: relative;
-		overflow: hidden;
-	}
-
-	.latest-work-portfolio {
-		width: 100%;
-		height: auto;
-		display: block;
-	}
-
-	.portfolio-name {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		z-index: 10;
-		background-color: rgba(216, 222, 233, 0.85);
-		color: #005a9c;
-		opacity: 0;
-		transition: opacity 0.3s ease;
-		font-size: 1.5rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		box-sizing: border-box;
-	}
-
-	.portfolio-size:hover .portfolio-name {
-		opacity: 0.9;
-	}
-
-	.contant-info {
-		font-family: "Poppins", sans-serif;
-		font-size: 1.2rem;
-		font-weight: 300;
-		box-sizing: border-box;
-		height: 25vh;
-		width: 100%;
-		text-align: center;
-		padding: 2rem;
-		background-color: #2e2e2e;
-		color: #b0b0b0;
 	}
 
 	.swiper-overlay {
@@ -740,6 +428,7 @@
 		font-size: 1rem;
 		cursor: pointer;
 		border-radius: 5px;
+		z-index: 10;
 	}
 
 	.close-slider-btn:hover {
@@ -757,7 +446,37 @@
 		font-style: normal;
 		color: #fff;
 	}
+
+	@media screen and (max-width: 1199px) {
+		.close-slider-btn {
+			opacity: 0.7;
+		}
+	}
+
+	@media screen and (max-width: 960px) {
+		.mySwiper2 {
+			width: 100%;
+			min-width: 370px;
+		}
+
+		.mySwiper {
+			width: 100%;
+			min-width: 370px;
+		}
+	}
 </style>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const abbrElement = document.querySelector("abbr[data-title]");
+
+		if (abbrElement) {
+			abbrElement.addEventListener("click", function () {
+				window.location.href = "index.html"; // 返回首頁
+			});
+		}
+	});
+</script>
 
 <script>
 	// 隱藏header並在滾動至底部時顯示
@@ -795,46 +514,83 @@
 <script>
 	document.addEventListener("DOMContentLoaded", () => {
 		const header = document.querySelector(".style-filter");
-		const stopSection = document.querySelector(".workflow-section");
+		const targetSection = document.querySelector("#design-project");
 
-		if (header && stopSection) {
-			const styleFilterTop =
-				header.getBoundingClientRect().top + window.scrollY;
-			const headerHeight = header.offsetHeight;
-			const threshold = 0;
-			let prevScrollY = 0;
+		if (header && targetSection) {
+			const styleFilterTop = header.offsetTop;
+			const headerHeight = header.getBoundingClientRect().height;
+
+			const enterThreshold = 10;
+			const exitThreshold = 150;
+
+			let prevScrollY = window.scrollY;
 			let isSticky = false;
-			let prevShouldStick = false;
+			let isScrolledUp = false;
+			let isWithinStickyRange = false;
 
-			window.addEventListener("scroll", () => {
-				const scrollY = window.scrollY;
-				const stopSectionTop =
-					stopSection.getBoundingClientRect().top + scrollY;
+			let lastToggleTime = 0;
+			const minToggleInterval = 100;
 
-				const shouldStick =
-					scrollY > styleFilterTop - threshold &&
-					scrollY < stopSectionTop - headerHeight - threshold;
+			let lastKnownScrollY = window.scrollY;
+			let ticking = false;
 
-				if (shouldStick !== prevShouldStick) {
-					if (shouldStick) {
-						header.classList.add("sticky");
-						isSticky = true;
-					} else {
+			let debounceTimeout;
+
+			const updateStickyState = () => {
+				const currentTime = Date.now();
+				if (currentTime - lastToggleTime < minToggleInterval) {
+					ticking = false;
+					return;
+				}
+
+				const scrollY = lastKnownScrollY;
+
+				const targetSectionBottom =
+					targetSection.offsetTop + targetSection.offsetHeight;
+
+				const isNowWithinStickyRange =
+					scrollY > styleFilterTop - enterThreshold &&
+					scrollY < targetSectionBottom - headerHeight - exitThreshold;
+
+				if (isNowWithinStickyRange !== isWithinStickyRange) {
+					isWithinStickyRange = isNowWithinStickyRange;
+					if (!isWithinStickyRange) {
 						header.classList.remove("sticky", "scrolled-up");
 						isSticky = false;
+						isScrolledUp = false;
 					}
 				}
 
-				if (isSticky) {
-					if (scrollY > prevScrollY) {
-						header.classList.remove("scrolled-up");
-					} else {
-						header.classList.add("scrolled-up");
+				if (isWithinStickyRange && !isSticky) {
+					isSticky = true;
+					header.classList.add("sticky");
+				} else if (!isWithinStickyRange && isSticky) {
+					isSticky = false;
+				}
+
+				if (isWithinStickyRange) {
+					const isScrollingUp = scrollY < prevScrollY;
+					if (isScrollingUp !== isScrolledUp) {
+						isScrolledUp = isScrollingUp;
+						header.classList.toggle("scrolled-up", isScrolledUp);
 					}
 				}
 
 				prevScrollY = scrollY;
-				prevShouldStick = shouldStick;
+				lastToggleTime = currentTime;
+				ticking = false;
+			};
+
+			window.addEventListener("scroll", () => {
+				lastKnownScrollY = window.scrollY;
+
+				if (!ticking) {
+					clearTimeout(debounceTimeout);
+					debounceTimeout = setTimeout(() => {
+						ticking = true;
+						requestAnimationFrame(updateStickyState);
+					}, 50);
+				}
 			});
 		}
 	});
@@ -843,10 +599,7 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 	AOS.init({
-		duration: 1800,
-	});
-	document.querySelectorAll(".portfolio-size").forEach((element, index) => {
-		element.setAttribute("data-aos-delay", index * 300);
+		duration: 1500,
 	});
 </script>
 
@@ -883,8 +636,10 @@
 
 			if (category === "all" || portfolioCategory === category) {
 				portfolio.style.display = "block";
+				portfolio.classList.add("aos-animate");
 			} else {
 				portfolio.style.display = "none";
+				portfolio.classList.remove("aos-animate");
 			}
 		});
 
@@ -898,5 +653,123 @@
 		if (selectedButton) {
 			selectedButton.classList.add("btn-selected");
 		}
+
+		AOS.refresh();
+	}
+</script>
+
+<!-- abbr -->
+<script>
+	let abbr = document.querySelector("abbr");
+	abbr.textContent = "";
+	let title = abbr.dataset.title;
+	let words = title.split(" ");
+	words.forEach((word) => {
+		let [initial, ...restLetters] = word.split("");
+		let initialSpan = document.createElement("span");
+		initialSpan.textContent = initial;
+		initialSpan.className = "initial";
+		abbr.append(initialSpan);
+		restLetters.forEach((letter) => {
+			let hiddenSpan = document.createElement("span");
+			hiddenSpan.textContent = letter;
+			hiddenSpan.className = "hidden";
+			abbr.append(hiddenSpan);
+		});
+	});
+</script>
+
+<!-- nav -->
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const hamburgerMenu = document.querySelector(".hamburger-menu");
+		const navbar = document.querySelector(".navbar");
+
+		hamburgerMenu.addEventListener("click", () => {
+			navbar.classList.toggle("active");
+			hamburgerMenu.classList.toggle("active");
+		});
+
+		document.querySelectorAll(".nav-text").forEach((div) => {
+			div.addEventListener("click", () => {
+				const targetId = div.getAttribute("data-target");
+				const targetElement = document.querySelector(targetId);
+
+				if (targetElement) {
+					targetElement.scrollIntoView({
+						behavior: "smooth",
+						block: "start",
+					});
+				}
+
+				if (navbar.classList.contains("active")) {
+					navbar.classList.remove("active");
+					hamburgerMenu.classList.remove("active");
+				}
+			});
+		});
+	});
+</script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+	let swiperThumbs; // 定義在全域範圍，避免重複初始化
+	let swiperMain;
+
+	function openSwiper(index) {
+		document.getElementById("swiperOverlay").style.display = "flex";
+
+		// 如果 Swiper 已經初始化，僅更新 active slide
+		if (swiperMain && swiperThumbs) {
+			swiperMain.params.grabCursor = true;
+			console.log(swiperMain.params);
+			swiperMain.slideToLoop(index); // 跳轉到指定索引
+			return;
+		}
+
+		// 縮略圖區域的 Swiper
+		swiperThumbs = new Swiper(".mySwiper", {
+			spaceBetween: 10,
+			slidesPerView: 4,
+			freeMode: true,
+			watchSlidesProgress: true,
+		});
+
+		// 主要展示區域的 Swiper
+		swiperMain = new Swiper(".mySwiper2", {
+			effect: "cube",
+			spaceBetween: 10,
+			loop: true,
+			initialSlide: index,
+			simulateTouch: true,
+			allowTouchMove: true,
+			grabCursor: true,
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
+			},
+			speed: 1500,
+			cubeEffect: {
+				shadow: true,
+				slideShadows: true,
+				shadowOffset: 20,
+				shadowScale: 0.94,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				type: "progressbar",
+			},
+			thumbs: {
+				swiper: swiperThumbs, // 連接縮略圖 Swiper
+			},
+		});
+	}
+
+	function closeSwiper() {
+		document.getElementById("swiperOverlay").style.display = "none";
+		if (swiperMain) swiperMain.slideTo(0); // 返回第一張，防止下次錯位
 	}
 </script>
