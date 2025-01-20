@@ -79,6 +79,7 @@ header.invisible {
 
 	.navbar.active {
 		display: flex;
+		text-align: center;
 	}
 
 	.hamburger-menu.active span:nth-child(1) {
@@ -122,6 +123,8 @@ p {
 	&:hover {
 		border: none;
 	}
+
+	display: none;
 }
 
 /* // <uniquifier>: Use a unique and descriptive class name */
@@ -211,8 +214,7 @@ a.company-title:hover {
 
 .about-content {
 	width: 34vw;
-	height: auto;
-	padding: 1.5rem;
+	padding: 2rem 0 0 3.5rem;
 }
 
 .about-sy {
@@ -222,14 +224,17 @@ a.company-title:hover {
 	font-size: 1.8rem;
 	background-image: url(./image/about/2J7A7821.jpg);
 	background-size: cover;
-	height: 70vh;
+	min-height: 70vh;
 	background-position: center;
 	text-shadow: 2px 2px 4px #fff;
+	max-width: 1340px;
+	font-weight: 600;
 }
 
 .about-sy p {
 	line-height: 1.5;
 	font-size: 1.4rem;
+	font-weight: 400;
 }
 
 .award-section {
@@ -292,7 +297,10 @@ a.company-title:hover {
 	object-fit: contain;
 }
 
-.design-project,
+.design-project {
+	margin: 3rem auto 0;
+}
+
 .workflow-section,
 .workflow-section2 {
 	margin: 3rem auto;
@@ -308,13 +316,13 @@ a.company-title:hover {
 .style-filter {
 	text-align: center;
 	padding: 1rem;
-	transition: padding 0.3s ease, background-color 0.3s ease,
-		box-shadow 0.3s ease;
+	/* transition: padding 0.3s ease, background-color 0.3s ease,
+		box-shadow 0.3s ease; */
 	background-color: #fff4f0;
 }
 
 .style-filter.sticky {
-	/* position: fixed; */
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -432,17 +440,8 @@ a.company-title:hover {
 	font-family: "Poppins", sans-serif;
 }
 
-.workflow-section {
-	height: 100vh;
-	text-align: center;
-	position: relative;
-	background-color: #fff4f0;
-	color: #2e2e2e;
-	font-family: "Poppins", sans-serif;
-}
-
 #workflow {
-  overflow: hidden!important;
+	overflow: hidden !important;
 }
 
 .workflow {
@@ -637,17 +636,6 @@ a.company-title:hover {
 	margin: 0 auto;
 }
 
-.workflow-item1:hover img,
-.workflow-item2:hover img,
-.workflow-item3:hover img,
-.workflow-item4:hover img,
-.workflow-item5:hover img,
-.workflow-item6:hover img,
-.workflow-item7:hover img,
-.workflow-item8:hover img {
-	transform: scale(1.4, 1.4);
-}
-
 .workflow-item p,
 .workflow-section2 h4 {
 	font-size: 1.4rem;
@@ -656,121 +644,6 @@ a.company-title:hover {
 
 .workflow-section2 p {
 	line-height: 1.1;
-}
-
-.workflow-item1 {
-	top: 88%;
-	left: 8.5%;
-	cursor: pointer;
-}
-
-.workflow-content {
-	top: 25%;
-	left: 45%;
-	text-align: left;
-	font-size: 1.8rem;
-}
-
-.workflow-item1 p,
-.workflow-item2 p,
-.workflow-item3 p,
-.workflow-item4 p,
-.workflow-item5 p,
-.workflow-item6 p,
-.workflow-item7 p,
-.workflow-item8 p {
-	opacity: 1;
-	visibility: visible;
-	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.workflow-item1:hover p,
-.workflow-item2:hover p,
-.workflow-item3:hover p,
-.workflow-item4:hover p,
-.workflow-item5:hover p,
-.workflow-item6:hover p,
-.workflow-item7:hover p,
-.workflow-item8:hover p {
-	opacity: 0;
-	visibility: hidden;
-}
-
-.workflow-item-content {
-	width: 30vw;
-	font-size: 1.4rem;
-}
-
-.workflow-item-title {
-	font-size: 2rem;
-	font-weight: 600;
-}
-
-#workflow-item1-content,
-#workflow-item2-content,
-#workflow-item3-content,
-#workflow-item4-content,
-#workflow-item5-content,
-#workflow-item6-content,
-#workflow-item7-content,
-#workflow-item8-content {
-	display: block;
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-}
-
-.workflow-item1:hover + .workflow-content #workflow-item1-content,
-.workflow-item2:hover + .workflow-content #workflow-item2-content,
-.workflow-item3:hover + .workflow-content #workflow-item3-content,
-.workflow-item4:hover + .workflow-content #workflow-item4-content,
-.workflow-item5:hover + .workflow-content #workflow-item5-content,
-.workflow-item6:hover + .workflow-content #workflow-item6-content,
-.workflow-item7:hover + .workflow-content #workflow-item7-content,
-.workflow-item8:hover + .workflow-content #workflow-item8-content {
-	display: block;
-	opacity: 1;
-}
-
-.workflow-item2 {
-	top: 78%;
-	left: 15.6%;
-	cursor: pointer;
-}
-
-.workflow-item3 {
-	top: 66%;
-	left: 30%;
-	cursor: pointer;
-}
-
-.workflow-item4 {
-	top: 55%;
-	left: 39%;
-	cursor: pointer;
-}
-
-.workflow-item5 {
-	top: 42%;
-	left: 47.5%;
-	cursor: pointer;
-}
-
-.workflow-item6 {
-	top: 30%;
-	left: 58%;
-	cursor: pointer;
-}
-
-.workflow-item7 {
-	top: 17.5%;
-	left: 70%;
-	cursor: pointer;
-}
-
-.workflow-item8 {
-	top: 6%;
-	left: 82%;
-	cursor: pointer;
 }
 
 .container {
@@ -786,17 +659,17 @@ a.company-title:hover {
 .timeline:before {
 	position: absolute;
 	top: 0;
-	bottom: 0;
+	bottom: 80px;
 	left: 40px;
 	width: 2px;
-	margin-left: -1.5px;
+	margin-left: 1px;
 	content: "";
-	background-color: #e9ecef;
+	background-color: #b0b0b0;
 }
 .timeline > li {
 	position: relative;
 	min-height: 50px;
-	margin-bottom: 50px;
+	margin-bottom: 80px;
 }
 .timeline > li:after,
 .timeline > li:before {
@@ -827,14 +700,14 @@ a.company-title:hover {
 }
 .timeline > li .timeline-image {
 	position: absolute;
-	z-index: 100;
+	z-index: 10;
 	left: 0;
 	width: 80px;
 	height: 80px;
 	margin-left: 0;
 	text-align: center;
 	color: white;
-	border: 7px solid #0070d8;
+	border: 7px solid #b0b0b0;
 	border-radius: 100%;
 	background-color: #fff4f0;
 	background-size: contain;
@@ -886,7 +759,7 @@ a.company-title:hover {
 	}
 	.timeline > li {
 		min-height: 100px;
-		margin-bottom: 100px;
+		margin-bottom: 80px;
 	}
 	.timeline > li .timeline-panel {
 		float: left;
@@ -896,9 +769,9 @@ a.company-title:hover {
 	}
 	.timeline > li .timeline-image {
 		left: 50%;
-		width: 100px;
-		height: 100px;
-		margin-left: -57px;
+		width: 93px;
+		height: 93px;
+		margin-left: -50px;
 	}
 	.timeline > li .timeline-image h4,
 	.timeline > li .timeline-image .h4 {
@@ -908,8 +781,8 @@ a.company-title:hover {
 	}
 	.timeline > li.timeline-inverted > .timeline-panel {
 		float: right;
-		padding: 0 30px 20px 20px;
-		text-align: left;
+		padding: 0 30px 0 20px;
+		text-align: center;
 	}
 }
 @media (min-width: 992px) {
@@ -917,7 +790,7 @@ a.company-title:hover {
 		min-height: 150px;
 	}
 	.timeline > li .timeline-panel {
-		padding: 0 20px 20px;
+		padding: 0 20px 0 20px;
 	}
 
 	.timeline > li .timeline-image h4,
@@ -949,6 +822,18 @@ a.company-title:hover {
 	.timeline > li.timeline-inverted > .timeline-panel {
 		padding: 0 100px 20px 20px;
 	}
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+	border-radius: 1.5rem 1.5rem 0 0;
+	width: 93px;
+	height: 93px;
+}
+
+.rounded-circle {
+	border-radius: 50% !important;
 }
 
 @media screen and (max-width: 1599px) {
@@ -990,7 +875,7 @@ a.company-title:hover {
 	font-size: 1.2rem;
 	font-weight: 300;
 	box-sizing: border-box;
-	height: 25vh;
+	min-height: 25vh;
 	width: 100%;
 	text-align: center;
 	padding: 2rem;
@@ -1032,14 +917,35 @@ a.company-title:hover {
 	}
 }
 
+@media screen and (max-width: 960px) {
+	.about-content {
+		width: 50vw;
+	}
+}
+
 @media screen and (max-width: 767px) {
+	.company {
+		margin-left: 12px;
+	}
+	.sy-logo,
+	.company-title {
+		display: none;
+	}
+
+	.logo-box {
+		display: block;
+		cursor: pointer;
+	}
+
 	.about-sy {
 		font-size: 1.6rem;
 	}
 
 	.about-content {
-		width: 50vw;
-		padding: 2.5rem;
+		width: 90vw;
+		padding: 1.5rem 0;
+		text-align: center;
+		margin: 0 auto;
 	}
 
 	.about-sy p {
@@ -1060,14 +966,26 @@ a.company-title:hover {
 	.portfolio-size {
 		width: 90vw;
 	}
+	.timeline:before {
+		margin-left: 5.5px;
+	}
+
+	.img-fluid {
+		width: 80px;
+		height: 80px;
+	}
 }
 
 @media screen and (max-width: 479px) {
-	.about-content {
+	/* .about-content {
 		width: 80vw;
 		padding: 1.5rem 0;
 		text-align: center;
 		margin: 0 auto;
+	} */
+
+	.about-content p {
+		margin: 8px;
 	}
 
 	.award-section {
