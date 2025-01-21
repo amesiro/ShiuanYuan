@@ -17,15 +17,6 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			rel="stylesheet"
-			href="https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
-			rel="stylesheet" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Pacifico&family=Tangerine:wght@400;700&family=Zen+Antique&display=swap"
-			rel="stylesheet" />
-		<link
 			href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&family=Zen+Antique&display=swap"
 			rel="stylesheet" />
 
@@ -53,7 +44,11 @@
 			</nav>
 		</header>
 
-		<div class="project" id="top">
+		<div
+			class="project"
+			data-selected="true"
+			data-category="住宅空間,大隱"
+			id="top">
 			<h2 class="project-name">大隱</h2>
 			<h3 class="project-type">住宅空間</h3>
 			<div class="image-container">
@@ -272,7 +267,7 @@
 			<div class="latest-works">
 				<a
 					class="portfolio-size"
-					data-category="住宅空間"
+					data-category="住宅空間,大隱"
 					data-aos="zoom-in-up"
 					href="/portfolio-1.html">
 					<img
@@ -316,6 +311,7 @@
 					class="portfolio-size"
 					data-category="住宅空間"
 					data-aos="zoom-in-up"
+					data-aos-offset="30"
 					href="/portfolio-1.html">
 					<img
 						class="latest-work-portfolio"
@@ -515,8 +511,9 @@
 	document.addEventListener("DOMContentLoaded", () => {
 		const header = document.querySelector(".style-filter");
 		const targetSection = document.querySelector("#design-project");
+		const mainHeader = document.querySelector("header"); // 主 header
 
-		if (header && targetSection) {
+		if (header && targetSection && mainHeader) {
 			const styleFilterTop = header.offsetTop;
 			const headerHeight = header.getBoundingClientRect().height;
 
@@ -536,6 +533,9 @@
 
 			let debounceTimeout;
 
+			const getDocHeight = () => document.documentElement.scrollHeight;
+			const getWinHeight = () => window.innerHeight;
+
 			const updateStickyState = () => {
 				const currentTime = Date.now();
 				if (currentTime - lastToggleTime < minToggleInterval) {
@@ -544,14 +544,23 @@
 				}
 
 				const scrollY = lastKnownScrollY;
-
 				const targetSectionBottom =
 					targetSection.offsetTop + targetSection.offsetHeight;
+
+				const isAtBottom = scrollY + getWinHeight() >= getDocHeight() - 10;
 
 				const isNowWithinStickyRange =
 					scrollY > styleFilterTop - enterThreshold &&
 					scrollY < targetSectionBottom - headerHeight - exitThreshold;
 
+				// 當滾動到底部時，確保避讓 header
+				if (isAtBottom) {
+					header.classList.add("scrolled-up");
+				} else {
+					header.classList.remove("scrolled-up");
+				}
+
+				// 更新 sticky 狀態
 				if (isNowWithinStickyRange !== isWithinStickyRange) {
 					isWithinStickyRange = isNowWithinStickyRange;
 					if (!isWithinStickyRange) {
@@ -568,6 +577,7 @@
 					isSticky = false;
 				}
 
+				// 更新滾動方向
 				if (isWithinStickyRange) {
 					const isScrollingUp = scrollY < prevScrollY;
 					if (isScrollingUp !== isScrolledUp) {
@@ -631,10 +641,21 @@
 		const portfolios = document.querySelectorAll(".portfolio-size");
 		const buttons = document.querySelectorAll(".style-filter .btn");
 
+		const displayedPortfolio = document.querySelector("[data-selected='true']");
+		const displayedCategory = displayedPortfolio
+			? displayedPortfolio.getAttribute("data-category")
+			: null;
+
 		portfolios.forEach((portfolio) => {
 			const portfolioCategory = portfolio.getAttribute("data-category");
 
-			if (category === "all" || portfolioCategory === category) {
+			const shouldHide =
+				displayedCategory && portfolioCategory === displayedCategory;
+
+			if (
+				(category === "all" || portfolioCategory === category) &&
+				!shouldHide
+			) {
 				portfolio.style.display = "block";
 				portfolio.classList.add("aos-animate");
 			} else {
@@ -656,6 +677,35 @@
 
 		AOS.refresh();
 	}
+
+	function filterDisplayedPortfolios() {
+		const displayedPortfolio = document.querySelector("[data-selected='true']");
+
+		if (displayedPortfolio) {
+			const bottomPortfolios = document.querySelectorAll(
+				"#design-project .portfolio-size"
+			);
+
+			const displayedCategory =
+				displayedPortfolio.getAttribute("data-category");
+
+			bottomPortfolios.forEach((portfolio) => {
+				if (portfolio.getAttribute("data-category") === displayedCategory) {
+					portfolio.style.display = "none";
+				}
+			});
+		}
+	}
+
+	document.addEventListener("DOMContentLoaded", () => {
+		filterDisplayedPortfolios();
+
+		const buttons = document.querySelectorAll(".style-filter .btn");
+		buttons.forEach((button) => {
+			const category = button.getAttribute("onclick").match(/'([^']+)'/)[1];
+			button.onclick = () => filterPortfolios(category);
+		});
+	});
 </script>
 
 <!-- abbr -->
@@ -716,21 +766,19 @@
 
 <!-- Initialize Swiper -->
 <script>
-	let swiperThumbs; // 定義在全域範圍，避免重複初始化
+	let swiperThumbs;
 	let swiperMain;
 
 	function openSwiper(index) {
 		document.getElementById("swiperOverlay").style.display = "flex";
 
-		// 如果 Swiper 已經初始化，僅更新 active slide
 		if (swiperMain && swiperThumbs) {
 			swiperMain.params.grabCursor = true;
 			console.log(swiperMain.params);
-			swiperMain.slideToLoop(index); // 跳轉到指定索引
+			swiperMain.slideToLoop(index);
 			return;
 		}
 
-		// 縮略圖區域的 Swiper
 		swiperThumbs = new Swiper(".mySwiper", {
 			spaceBetween: 10,
 			slidesPerView: 4,
@@ -738,7 +786,6 @@
 			watchSlidesProgress: true,
 		});
 
-		// 主要展示區域的 Swiper
 		swiperMain = new Swiper(".mySwiper2", {
 			effect: "cube",
 			spaceBetween: 10,
@@ -763,13 +810,13 @@
 				type: "progressbar",
 			},
 			thumbs: {
-				swiper: swiperThumbs, // 連接縮略圖 Swiper
+				swiper: swiperThumbs,
 			},
 		});
 	}
 
 	function closeSwiper() {
 		document.getElementById("swiperOverlay").style.display = "none";
-		if (swiperMain) swiperMain.slideTo(0); // 返回第一張，防止下次錯位
+		if (swiperMain) swiperMain.slideTo(0);
 	}
 </script>
