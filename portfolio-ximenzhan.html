@@ -22,6 +22,16 @@
 
 		<!-- AOS -->
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				if (!sessionStorage.getItem("cacheCleared")) {
+					sessionStorage.setItem("cacheCleared", "true");
+					const url = window.location.href.split("?")[0];
+					const newUrl = `${url}?clearCache=${new Date().getTime()}`;
+					window.location.replace(newUrl);
+				}
+			});
+		</script>
 	</head>
 	<body>
 		<header>
@@ -47,7 +57,7 @@
 		<div
 			class="project"
 			data-selected="true"
-			data-category="住宅空間,西門綻"
+			data-category="樣品屋,西門綻"
 			id="top">
 			<h2 class="project-name">西門綻</h2>
 			<h3 class="project-type">樣品屋</h3>
@@ -147,6 +157,102 @@
 					alt=""
 					onclick="openSwiper(15)" />
 			</div>
+		</div>
+
+		<div class="design-project" id="design-project">
+			<h2 class="portfolio-list">其他作品</h2>
+			<div class="style-filter">
+				<button
+					href="javascript: void(0)"
+					onclick="filterPortfolios('all')"
+					class="btn btn-selected">
+					全部
+				</button>
+				<button
+					href="javascript: void(0)"
+					onclick="filterPortfolios('住宅空間')"
+					class="btn">
+					住宅空間
+				</button>
+				<button
+					href="javascript: void(0)"
+					onclick="filterPortfolios('公共設計')"
+					class="btn">
+					公共設計
+				</button>
+				<button
+					href="javascript: void(0)"
+					onclick="filterPortfolios('樣品屋')"
+					class="btn">
+					樣品屋
+				</button>
+			</div>
+			<div class="latest-works">
+				<a
+					class="portfolio-size"
+					data-category="住宅空間,大隱"
+					data-aos="zoom-in-up"
+					href="portfolio-dayin.html">
+					<img
+						class="latest-work-portfolio"
+						src="./image/front cover/Portfolio-1/2J7A6799.jpg"
+						alt="Portfolio 1" />
+					<div class="portfolio-name">
+						<p>大隱</p>
+						<p>Veiw more</p>
+					</div>
+				</a>
+				<a
+					class="portfolio-size"
+					data-category="樣品屋,西門綻"
+					data-aos="zoom-in-up"
+					href="portfolio-ximenzhan.html">
+					<img
+						class="latest-work-portfolio"
+						src="./image/front cover/Portfolio-2/2J7A8464.jpg"
+						alt="Portfolio 2" />
+					<div class="portfolio-name">
+						<p>西門綻</p>
+						<p>Veiw more</p>
+					</div>
+				</a>
+				<a
+					class="portfolio-size"
+					data-category="公共設計,東騰介"
+					data-aos="zoom-in-up"
+					href="portfolio-dungtengjie.html">
+					<img
+						class="latest-work-portfolio"
+						src="./image/front cover/Portfolio-3/IMG_3141.JPG"
+						alt="Portfolio 3" />
+					<div class="portfolio-name">
+						<p>東騰介</p>
+						<p>Veiw more</p>
+					</div>
+				</a>
+				<a
+					class="portfolio-size"
+					data-category="住宅空間,國王雙子星"
+					data-aos="zoom-in-up"
+					data-aos-offset="30"
+					href="portfolio-king.html">
+					<img
+						class="latest-work-portfolio"
+						src="./image/front cover/Portfolio-4/2J7A7668.jpg"
+						alt="Portfolio 4" />
+					<div class="portfolio-name">
+						<p>國王雙子星</p>
+						<p>Veiw more</p>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="contant-info" id="contact-us">
+			<p>萱源實業有限公司</p>
+			<p>02-2921-7363</p>
+			<p>新北市三重區同安東街4號</p>
+			<p>shiuanyuan1@gmail.com</p>
 		</div>
 
 		<!-- Swiper -->
@@ -258,102 +364,6 @@
 				</div>
 			</div>
 			<button class="close-slider-btn" onclick="closeSwiper()">close ╳</button>
-		</div>
-
-		<div class="design-project" id="design-project">
-			<h2 class="portfolio-list">其他作品</h2>
-			<div class="style-filter">
-				<button
-					href="javascript: void(0)"
-					onclick="filterPortfolios('all')"
-					class="btn btn-selected">
-					全部
-				</button>
-				<button
-					href="javascript: void(0)"
-					onclick="filterPortfolios('住宅空間')"
-					class="btn">
-					住宅空間
-				</button>
-				<button
-					href="javascript: void(0)"
-					onclick="filterPortfolios('公共設計')"
-					class="btn">
-					公共設計
-				</button>
-				<button
-					href="javascript: void(0)"
-					onclick="filterPortfolios('樣品屋')"
-					class="btn">
-					樣品屋
-				</button>
-			</div>
-			<div class="latest-works">
-				<a
-					class="portfolio-size"
-					data-category="住宅空間,大隱"
-					data-aos="zoom-in-up"
-					href="/portfolio-1.html">
-					<img
-						class="latest-work-portfolio"
-						src="./image/front cover/Portfolio-1/2J7A6799.jpg"
-						alt="Portfolio 1" />
-					<div class="portfolio-name">
-						<p>大隱</p>
-						<p>Veiw more</p>
-					</div>
-				</a>
-				<a
-					class="portfolio-size"
-					data-category="住宅空間,西門綻"
-					data-aos="zoom-in-up"
-					href="/portfolio-1.html">
-					<img
-						class="latest-work-portfolio"
-						src="./image/front cover/Portfolio-2/2J7A8464.jpg"
-						alt="Portfolio 2" />
-					<div class="portfolio-name">
-						<p>西門綻</p>
-						<p>Veiw more</p>
-					</div>
-				</a>
-				<a
-					class="portfolio-size"
-					data-category="公共設計,東騰介"
-					data-aos="zoom-in-up"
-					href="/portfolio-1.html">
-					<img
-						class="latest-work-portfolio"
-						src="./image/front cover/Portfolio-3/IMG_3141.JPG"
-						alt="Portfolio 3" />
-					<div class="portfolio-name">
-						<p>東騰介</p>
-						<p>Veiw more</p>
-					</div>
-				</a>
-				<a
-					class="portfolio-size"
-					data-category="住宅空間,國王雙子星"
-					data-aos="zoom-in-up"
-					data-aos-offset="30"
-					href="/portfolio-1.html">
-					<img
-						class="latest-work-portfolio"
-						src="./image/front cover/Portfolio-4/2J7A7668.jpg"
-						alt="Portfolio 4" />
-					<div class="portfolio-name">
-						<p>國王雙子星</p>
-						<p>Veiw more</p>
-					</div>
-				</a>
-			</div>
-		</div>
-
-		<div class="contant-info" id="contact-us">
-			<p>萱源實業有限公司</p>
-			<p>02-2921-7363</p>
-			<p>新北市三重區同安東街4號</p>
-			<p>shiuanyuan1@gmail.com</p>
 		</div>
 	</body>
 </html>
@@ -492,7 +502,7 @@
 
 		if (abbrElement) {
 			abbrElement.addEventListener("click", function () {
-				window.location.href = "index.html"; // 返回首頁
+				window.location.href = "index.html";
 			});
 		}
 	});
@@ -537,88 +547,51 @@
 		const targetSection = document.querySelector(".design-project");
 
 		if (header && targetSection) {
-			const styleFilterTop = header.offsetTop;
 			const headerHeight = header.getBoundingClientRect().height;
-
-			const enterThreshold = 10;
-			const exitThreshold = 150;
+			const headerTopOffset = header.offsetTop;
+			const sectionBottom =
+				targetSection.offsetTop + targetSection.offsetHeight;
 
 			let prevScrollY = window.scrollY;
 			let isSticky = false;
 			let isScrolledUp = false;
-			let isWithinStickyRange = false;
-
-			let lastToggleTime = 0;
-			const minToggleInterval = 100;
-
-			let lastKnownScrollY = window.scrollY;
-			let ticking = false;
-
-			let debounceTimeout;
 
 			const updateStickyState = () => {
-				const currentTime = Date.now();
-				if (currentTime - lastToggleTime < minToggleInterval) {
-					ticking = false;
-					return;
-				}
+				const currentScrollY = window.scrollY;
 
-				const scrollY = lastKnownScrollY;
+				const reachedSticky = currentScrollY >= headerTopOffset;
+				const withinSection =
+					currentScrollY >= headerTopOffset &&
+					currentScrollY < sectionBottom - headerHeight;
 
-				const targetSectionBottom =
-					targetSection.offsetTop + targetSection.offsetHeight;
-
-				const isNowWithinStickyRange =
-					scrollY > styleFilterTop - enterThreshold &&
-					scrollY < targetSectionBottom - headerHeight - exitThreshold;
-
-				if (isNowWithinStickyRange !== isWithinStickyRange) {
-					isWithinStickyRange = isNowWithinStickyRange;
-					if (!isWithinStickyRange) {
-						header.classList.remove("sticky", "scrolled-up");
-						isSticky = false;
-						isScrolledUp = false;
-					}
-				}
-
-				if (isWithinStickyRange && !isSticky) {
+				if (reachedSticky && withinSection && !isSticky) {
 					isSticky = true;
 					header.classList.add("sticky");
-				} else if (!isWithinStickyRange && isSticky) {
+				} else if ((!withinSection || !reachedSticky) && isSticky) {
 					isSticky = false;
+					header.classList.remove("sticky", "scrolled-up");
 				}
 
-				if (isWithinStickyRange) {
-					const isScrollingUp = scrollY < prevScrollY;
-					if (isScrollingUp !== isScrolledUp) {
-						isScrolledUp = isScrollingUp;
-						header.classList.toggle("scrolled-up", isScrolledUp);
-					}
+				const scrolledToBottom =
+					window.innerHeight + currentScrollY >= document.body.offsetHeight;
 
-					// 檢查是否滾動到頁面底部
-					const scrolledToBottom =
-						window.innerHeight + window.scrollY >= document.body.offsetHeight;
-
-					if (scrolledToBottom && !header.classList.contains("scrolled-up")) {
-						header.classList.add("scrolled-up");
-					}
+				if (scrolledToBottom && isSticky) {
+					header.classList.add("scrolled-bottom");
+				} else if (!scrolledToBottom && isSticky) {
+					header.classList.remove("scrolled-bottom");
 				}
 
-				prevScrollY = scrollY;
-				lastToggleTime = currentTime;
-				ticking = false;
+				const isScrollingUp = currentScrollY < prevScrollY;
+				if (isScrollingUp !== isScrolledUp) {
+					isScrolledUp = isScrollingUp;
+					header.classList.toggle("scrolled-up", isScrolledUp);
+				}
+
+				prevScrollY = currentScrollY;
 			};
 
 			window.addEventListener("scroll", () => {
-				lastKnownScrollY = window.scrollY;
-
-				if (!ticking) {
-					clearTimeout(debounceTimeout);
-					debounceTimeout = setTimeout(() => {
-						ticking = true;
-						requestAnimationFrame(updateStickyState);
-					}, 50);
-				}
+				requestAnimationFrame(updateStickyState);
 			});
 		}
 	});

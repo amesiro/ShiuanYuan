@@ -332,14 +332,16 @@ a.company-title:hover {
 	z-index: 99;
 }
 
-.style-filter.sticky.scrolled-up {
+.style-filter.sticky.scrolled-up,
+.style-filter.sticky.scrolled-bottom {
 	padding-top: 70px;
 	background-color: #fff4f0;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .style-filter.sticky,
-.style-filter.sticky.scrolled-up {
+.style-filter.sticky.scrolled-up,
+.style-filter.sticky.scrolled-bottom {
 	transition: padding 0.3s ease, background-color 0.3s ease,
 		box-shadow 0.3s ease;
 }

@@ -891,7 +891,7 @@
 	});
 </script> -->
 
-<script>
+<!-- <script>
 	document.addEventListener("DOMContentLoaded", () => {
 		const header = document.querySelector(".style-filter");
 		const targetSection = document.querySelector("#design-project");
@@ -985,6 +985,66 @@
 						requestAnimationFrame(updateStickyState);
 					}, 50);
 				}
+			});
+		}
+	});
+</script> -->
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const header = document.querySelector(".style-filter");
+		const targetSection = document.querySelector(".design-project");
+
+		if (header && targetSection) {
+			const headerHeight = header.getBoundingClientRect().height;
+			const headerTopOffset = header.offsetTop;
+			const sectionBottom =
+				targetSection.offsetTop + targetSection.offsetHeight;
+
+			let prevScrollY = window.scrollY;
+			let isSticky = false;
+			let isScrolledUp = false;
+
+			const updateStickyState = () => {
+				const currentScrollY = window.scrollY;
+
+				const reachedSticky = currentScrollY >= headerTopOffset;
+				const withinSection =
+					currentScrollY >= headerTopOffset &&
+					currentScrollY < sectionBottom - headerHeight;
+
+				if (reachedSticky && withinSection && !isSticky) {
+					isSticky = true;
+					header.classList.add("sticky");
+				} else if ((!withinSection || !reachedSticky) && isSticky) {
+					isSticky = false;
+					header.classList.remove("sticky", "scrolled-up", "scrolled-bottom");
+				}
+
+				const scrolledToBottom =
+					window.innerHeight + currentScrollY >= document.body.offsetHeight;
+
+				if (scrolledToBottom && isSticky) {
+					header.classList.add("scrolled-bottom");
+				} else if (!scrolledToBottom && isSticky) {
+					header.classList.remove("scrolled-bottom");
+				}
+
+				const isScrollingUp = currentScrollY < prevScrollY;
+				if (isScrollingUp !== isScrolledUp) {
+					isScrolledUp = isScrollingUp;
+					header.classList.toggle("scrolled-up", isScrolledUp);
+				}
+
+				prevScrollY = currentScrollY;
+			};
+
+			// 初始化檢查，處理未滾動的情況
+			updateStickyState();
+
+			// 綁定滾動事件
+			window.addEventListener("scroll", () => {
+				requestAnimationFrame(updateStickyState);
 			});
 		}
 	});
