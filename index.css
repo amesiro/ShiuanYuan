@@ -43,7 +43,6 @@ header.invisible {
 	cursor: pointer;
 	z-index: 110;
 	margin-left: auto;
-	min-width: 24px;
 }
 
 .hamburger-menu span {
@@ -52,6 +51,7 @@ header.invisible {
 	height: 2px;
 	background-color: #333;
 	transition: transform 0.3s ease, opacity 0.3s ease;
+	min-width: 12px;
 }
 
 .navbar {
