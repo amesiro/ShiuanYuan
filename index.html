@@ -589,462 +589,86 @@
 	});
 </script>
 
-<!-- <script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const header = document.querySelector(".style-filter");
-		const targetSection = document.querySelector("#design-project");
-
-		if (header && targetSection) {
-			const styleFilterTop = header.offsetTop;
-			const headerHeight = header.offsetHeight;
-
-			const startThreshold = 0;
-			const endThreshold = 0;
-
-			let prevScrollY = window.scrollY;
-			let isSticky = false;
-			let isScrolledUp = false;
-			let isWithinStickyRange = false;
-
-			let lastKnownScrollY = window.scrollY;
-			let ticking = false;
-
-			const updateStickyState = () => {
-				const scrollY = lastKnownScrollY;
-
-				const targetSectionBottom =
-					targetSection.offsetTop + targetSection.offsetHeight - endThreshold;
-
-				const isNowWithinStickyRange =
-					scrollY > styleFilterTop - startThreshold &&
-					scrollY < targetSectionBottom - headerHeight;
-
-				if (isNowWithinStickyRange !== isWithinStickyRange) {
-					isWithinStickyRange = isNowWithinStickyRange;
-					if (!isWithinStickyRange) {
-						header.classList.remove("sticky", "scrolled-up");
-						isSticky = false;
-						isScrolledUp = false;
-					}
-				}
-
-				if (isWithinStickyRange && !isSticky) {
-					isSticky = true;
-					header.classList.add("sticky");
-				} else if (!isWithinStickyRange && isSticky) {
-					isSticky = false;
-				}
-
-				if (isWithinStickyRange) {
-					const isScrollingUp = scrollY < prevScrollY;
-					if (isScrollingUp !== isScrolledUp) {
-						isScrolledUp = isScrollingUp;
-						header.classList.toggle("scrolled-up", isScrolledUp);
-					}
-				}
-
-				prevScrollY = scrollY;
-				ticking = false;
-			};
-
-			window.addEventListener("scroll", () => {
-				lastKnownScrollY = window.scrollY;
-
-				if (!ticking) {
-					ticking = true;
-					requestAnimationFrame(updateStickyState);
-				}
-			});
-		}
-	});
-</script> -->
-
-<!-- <script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const header = document.querySelector(".style-filter");
-		const targetSection = document.querySelector("#design-project");
-
-		if (header && targetSection) {
-			const styleFilterTop = header.offsetTop;
-			const headerHeight = header.offsetHeight;
-
-			const startThreshold = 0;
-
-			let prevScrollY = window.scrollY;
-			let isSticky = false;
-			let isScrolledUp = false;
-			let isWithinStickyRange = false;
-
-			let lastKnownScrollY = window.scrollY;
-			let ticking = false;
-
-			const updateStickyState = () => {
-				const scrollY = lastKnownScrollY;
-
-				// 移除 endThreshold，直接计算目标部分底部位置
-				const targetSectionBottom =
-					targetSection.offsetTop + targetSection.offsetHeight;
-
-				// 判断是否进入粘性范围
-				const isNowWithinStickyRange =
-					scrollY > styleFilterTop - startThreshold &&
-					scrollY < targetSectionBottom - headerHeight;
-
-				if (isNowWithinStickyRange !== isWithinStickyRange) {
-					isWithinStickyRange = isNowWithinStickyRange;
-					if (!isWithinStickyRange) {
-						header.classList.remove("sticky", "scrolled-up");
-						isSticky = false;
-						isScrolledUp = false;
-					}
-				}
-
-				if (isWithinStickyRange && !isSticky) {
-					isSticky = true;
-					header.classList.add("sticky");
-				} else if (!isWithinStickyRange && isSticky) {
-					isSticky = false;
-				}
-
-				if (isWithinStickyRange) {
-					const isScrollingUp = scrollY < prevScrollY;
-					if (isScrollingUp !== isScrolledUp) {
-						isScrolledUp = isScrollingUp;
-						header.classList.toggle("scrolled-up", isScrolledUp);
-					}
-				}
-
-				prevScrollY = scrollY;
-				ticking = false;
-			};
-
-			window.addEventListener("scroll", () => {
-				lastKnownScrollY = window.scrollY;
-
-				if (!ticking) {
-					ticking = true;
-					requestAnimationFrame(updateStickyState);
-				}
-			});
-		}
-	});
-</script> -->
-
-<!-- <script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const header = document.querySelector(".style-filter");
-		const targetSection = document.querySelector("#design-project");
-
-		if (header && targetSection) {
-			const styleFilterTop = header.offsetTop;
-			const headerHeight = header.getBoundingClientRect().height;
-			const buffer = 123; // 增加緩衝區防止提前取消
-
-			let prevScrollY = window.scrollY;
-			let isSticky = false;
-			let isScrolledUp = false;
-			let isWithinStickyRange = false;
-
-			let lastKnownScrollY = window.scrollY;
-			let ticking = false;
-
-			const updateStickyState = () => {
-				const scrollY = lastKnownScrollY;
-
-				const targetSectionBottom =
-					targetSection.offsetTop + targetSection.offsetHeight;
-
-				const isNowWithinStickyRange =
-					scrollY > styleFilterTop &&
-					scrollY < targetSectionBottom - headerHeight - buffer;
-
-				if (isNowWithinStickyRange !== isWithinStickyRange) {
-					isWithinStickyRange = isNowWithinStickyRange;
-					if (!isWithinStickyRange) {
-						header.classList.remove("sticky", "scrolled-up");
-						isSticky = false;
-						isScrolledUp = false;
-					}
-				}
-
-				if (isWithinStickyRange && !isSticky) {
-					isSticky = true;
-					header.classList.add("sticky");
-				} else if (!isWithinStickyRange && isSticky) {
-					isSticky = false;
-				}
-
-				if (isWithinStickyRange) {
-					const isScrollingUp = scrollY < prevScrollY;
-					if (isScrollingUp !== isScrolledUp) {
-						isScrolledUp = isScrollingUp;
-						header.classList.toggle("scrolled-up", isScrolledUp);
-					}
-				}
-
-				console.log({
-					scrollY,
-					styleFilterTop,
-					targetSectionBottom,
-					headerHeight,
-					isWithinStickyRange,
-				});
-
-				prevScrollY = scrollY;
-				ticking = false;
-			};
-
-			window.addEventListener("scroll", () => {
-				lastKnownScrollY = window.scrollY;
-
-				if (!ticking) {
-					ticking = true;
-					requestAnimationFrame(updateStickyState);
-				}
-			});
-		}
-	});
-</script> -->
-
-<!-- <script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const header = document.querySelector(".style-filter");
-		const targetSection = document.querySelector("#design-project");
-
-		if (header && targetSection) {
-			const styleFilterTop = header.offsetTop;
-			const headerHeight = header.getBoundingClientRect().height;
-
-			const enterThreshold = 10;
-			const exitThreshold = 150;
-
-			let prevScrollY = window.scrollY;
-			let isSticky = false;
-			let isScrolledUp = false;
-			let isWithinStickyRange = false;
-
-			let lastToggleTime = 0;
-			const minToggleInterval = 100;
-
-			let lastKnownScrollY = window.scrollY;
-			let ticking = false;
-
-			let debounceTimeout;
-
-			const updateStickyState = () => {
-				const currentTime = Date.now();
-				if (currentTime - lastToggleTime < minToggleInterval) {
-					ticking = false;
-					return;
-				}
-
-				const scrollY = lastKnownScrollY;
-
-				const targetSectionBottom =
-					targetSection.offsetTop + targetSection.offsetHeight;
-
-				const isNowWithinStickyRange =
-					scrollY > styleFilterTop - enterThreshold &&
-					scrollY < targetSectionBottom - headerHeight - exitThreshold;
-
-				if (isNowWithinStickyRange !== isWithinStickyRange) {
-					isWithinStickyRange = isNowWithinStickyRange;
-					if (!isWithinStickyRange) {
-						header.classList.remove("sticky", "scrolled-up");
-						isSticky = false;
-						isScrolledUp = false;
-					}
-				}
-
-				if (isWithinStickyRange && !isSticky) {
-					isSticky = true;
-					header.classList.add("sticky");
-				} else if (!isWithinStickyRange && isSticky) {
-					isSticky = false;
-				}
-
-				if (isWithinStickyRange) {
-					const isScrollingUp = scrollY < prevScrollY;
-					if (isScrollingUp !== isScrolledUp) {
-						isScrolledUp = isScrollingUp;
-						header.classList.toggle("scrolled-up", isScrolledUp);
-					}
-				}
-
-				prevScrollY = scrollY;
-				lastToggleTime = currentTime;
-				ticking = false;
-			};
-
-			window.addEventListener("scroll", () => {
-				lastKnownScrollY = window.scrollY;
-
-				if (!ticking) {
-					clearTimeout(debounceTimeout);
-					debounceTimeout = setTimeout(() => {
-						ticking = true;
-						requestAnimationFrame(updateStickyState);
-					}, 50);
-				}
-			});
-		}
-	});
-</script> -->
-
-<!-- <script>
-	document.addEventListener("DOMContentLoaded", () => {
-		const header = document.querySelector(".style-filter");
-		const targetSection = document.querySelector("#design-project");
-		const mainHeader = document.querySelector("header"); // 主 header
-
-		if (header && targetSection && mainHeader) {
-			const styleFilterTop = header.offsetTop;
-			const headerHeight = header.getBoundingClientRect().height;
-
-			const enterThreshold = 10;
-			const exitThreshold = 150;
-
-			let prevScrollY = window.scrollY;
-			let isSticky = false;
-			let isScrolledUp = false;
-			let isWithinStickyRange = false;
-
-			let lastToggleTime = 0;
-			const minToggleInterval = 100;
-
-			let lastKnownScrollY = window.scrollY;
-			let ticking = false;
-
-			let debounceTimeout;
-
-			const getDocHeight = () => document.documentElement.scrollHeight;
-			const getWinHeight = () => window.innerHeight;
-
-			const updateStickyState = () => {
-				const currentTime = Date.now();
-				if (currentTime - lastToggleTime < minToggleInterval) {
-					ticking = false;
-					return;
-				}
-
-				const scrollY = lastKnownScrollY;
-				const targetSectionBottom =
-					targetSection.offsetTop + targetSection.offsetHeight;
-
-				const isAtBottom = scrollY + getWinHeight() >= getDocHeight() - 10;
-
-				const isNowWithinStickyRange =
-					scrollY > styleFilterTop - enterThreshold &&
-					scrollY < targetSectionBottom - headerHeight - exitThreshold;
-
-				// 當滾動到底部時，確保避讓 header
-				if (isAtBottom) {
-					header.classList.add("scrolled-up");
-				} else {
-					header.classList.remove("scrolled-up");
-				}
-
-				// 更新 sticky 狀態
-				if (isNowWithinStickyRange !== isWithinStickyRange) {
-					isWithinStickyRange = isNowWithinStickyRange;
-					if (!isWithinStickyRange) {
-						header.classList.remove("sticky", "scrolled-up");
-						isSticky = false;
-						isScrolledUp = false;
-					}
-				}
-
-				if (isWithinStickyRange && !isSticky) {
-					isSticky = true;
-					header.classList.add("sticky");
-				} else if (!isWithinStickyRange && isSticky) {
-					isSticky = false;
-				}
-
-				// 更新滾動方向
-				if (isWithinStickyRange) {
-					const isScrollingUp = scrollY < prevScrollY;
-					if (isScrollingUp !== isScrolledUp) {
-						isScrolledUp = isScrollingUp;
-						header.classList.toggle("scrolled-up", isScrolledUp);
-					}
-				}
-
-				prevScrollY = scrollY;
-				lastToggleTime = currentTime;
-				ticking = false;
-			};
-
-			window.addEventListener("scroll", () => {
-				lastKnownScrollY = window.scrollY;
-
-				if (!ticking) {
-					clearTimeout(debounceTimeout);
-					debounceTimeout = setTimeout(() => {
-						ticking = true;
-						requestAnimationFrame(updateStickyState);
-					}, 50);
-				}
-			});
-		}
-	});
-</script> -->
-
 <script>
 	document.addEventListener("DOMContentLoaded", () => {
 		const header = document.querySelector(".style-filter");
-		const targetSection = document.querySelector(".design-project");
+		const targetSection = document.querySelector("#design-project");
 
 		if (header && targetSection) {
+			const styleFilterTop = header.offsetTop;
 			const headerHeight = header.getBoundingClientRect().height;
-			const headerTopOffset = header.offsetTop;
-			const sectionBottom =
-				targetSection.offsetTop + targetSection.offsetHeight;
+
+			const enterThreshold = 10;
+			const exitThreshold = 150;
 
 			let prevScrollY = window.scrollY;
 			let isSticky = false;
 			let isScrolledUp = false;
+			let isWithinStickyRange = false;
+
+			let lastToggleTime = 0;
+			const minToggleInterval = 100;
+
+			let lastKnownScrollY = window.scrollY;
+			let ticking = false;
+
+			let debounceTimeout;
 
 			const updateStickyState = () => {
-				const currentScrollY = window.scrollY;
+				const currentTime = Date.now();
+				if (currentTime - lastToggleTime < minToggleInterval) {
+					ticking = false;
+					return;
+				}
 
-				const reachedSticky = currentScrollY >= headerTopOffset;
-				const withinSection =
-					currentScrollY >= headerTopOffset &&
-					currentScrollY < sectionBottom - headerHeight;
+				const scrollY = lastKnownScrollY;
 
-				if (reachedSticky && withinSection && !isSticky) {
+				const targetSectionBottom =
+					targetSection.offsetTop + targetSection.offsetHeight;
+
+				const isNowWithinStickyRange =
+					scrollY > styleFilterTop - enterThreshold &&
+					scrollY < targetSectionBottom - headerHeight - exitThreshold;
+
+				if (isNowWithinStickyRange !== isWithinStickyRange) {
+					isWithinStickyRange = isNowWithinStickyRange;
+					if (!isWithinStickyRange) {
+						header.classList.remove("sticky", "scrolled-up");
+						isSticky = false;
+						isScrolledUp = false;
+					}
+				}
+
+				if (isWithinStickyRange && !isSticky) {
 					isSticky = true;
 					header.classList.add("sticky");
-				} else if ((!withinSection || !reachedSticky) && isSticky) {
+				} else if (!isWithinStickyRange && isSticky) {
 					isSticky = false;
-					header.classList.remove("sticky", "scrolled-up", "scrolled-bottom");
 				}
 
-				const scrolledToBottom =
-					window.innerHeight + currentScrollY >= document.body.offsetHeight;
-
-				if (scrolledToBottom && isSticky) {
-					header.classList.add("scrolled-bottom");
-				} else if (!scrolledToBottom && isSticky) {
-					header.classList.remove("scrolled-bottom");
+				if (isWithinStickyRange) {
+					const isScrollingUp = scrollY < prevScrollY;
+					if (isScrollingUp !== isScrolledUp) {
+						isScrolledUp = isScrollingUp;
+						header.classList.toggle("scrolled-up", isScrolledUp);
+					}
 				}
 
-				const isScrollingUp = currentScrollY < prevScrollY;
-				if (isScrollingUp !== isScrolledUp) {
-					isScrolledUp = isScrollingUp;
-					header.classList.toggle("scrolled-up", isScrolledUp);
-				}
-
-				prevScrollY = currentScrollY;
+				prevScrollY = scrollY;
+				lastToggleTime = currentTime;
+				ticking = false;
 			};
 
-			// 初始化檢查，處理未滾動的情況
-			updateStickyState();
-
-			// 綁定滾動事件
 			window.addEventListener("scroll", () => {
-				requestAnimationFrame(updateStickyState);
+				lastKnownScrollY = window.scrollY;
+
+				if (!ticking) {
+					clearTimeout(debounceTimeout);
+					debounceTimeout = setTimeout(() => {
+						ticking = true;
+						requestAnimationFrame(updateStickyState);
+					}, 50);
+				}
 			});
 		}
 	});

@@ -547,52 +547,50 @@
 		const targetSection = document.querySelector(".design-project");
 
 		if (header && targetSection) {
-			const headerHeight = header.getBoundingClientRect().height;
-			const headerTopOffset = header.offsetTop;
+			const headerHeight = header.offsetHeight;
 			const sectionBottom =
 				targetSection.offsetTop + targetSection.offsetHeight;
-
 			let prevScrollY = window.scrollY;
 			let isSticky = false;
-			let isScrolledUp = false;
 
-			const updateStickyState = () => {
+			window.addEventListener("scroll", () => {
 				const currentScrollY = window.scrollY;
+				const isWithinSection =
+					currentScrollY >= targetSection.offsetTop &&
+					currentScrollY < sectionBottom;
 
-				const reachedSticky = currentScrollY >= headerTopOffset;
-				const withinSection =
-					currentScrollY >= headerTopOffset &&
-					currentScrollY < sectionBottom - headerHeight;
-
-				if (reachedSticky && withinSection && !isSticky) {
-					isSticky = true;
+				if (isWithinSection && !isSticky) {
 					header.classList.add("sticky");
-				} else if ((!withinSection || !reachedSticky) && isSticky) {
+					isSticky = true;
+				} else if (!isWithinSection && isSticky) {
+					header.classList.remove("sticky");
 					isSticky = false;
-					header.classList.remove("sticky", "scrolled-up");
-				}
-
-				const scrolledToBottom =
-					window.innerHeight + currentScrollY >= document.body.offsetHeight;
-
-				if (scrolledToBottom && isSticky) {
-					header.classList.add("scrolled-bottom");
-				} else if (!scrolledToBottom && isSticky) {
-					header.classList.remove("scrolled-bottom");
 				}
 
 				const isScrollingUp = currentScrollY < prevScrollY;
-				if (isScrollingUp !== isScrolledUp) {
-					isScrolledUp = isScrollingUp;
-					header.classList.toggle("scrolled-up", isScrolledUp);
-				}
-
+				header.classList.toggle("scrolled-up", isScrollingUp);
 				prevScrollY = currentScrollY;
-			};
-
-			window.addEventListener("scroll", () => {
-				requestAnimationFrame(updateStickyState);
 			});
+		}
+	});
+</script>
+
+<script>
+	function isScrolledToBottom() {
+		return (
+			window.innerHeight + window.scrollY >=
+			document.documentElement.scrollHeight
+		);
+	}
+
+	window.addEventListener("scroll", () => {
+		const elements = document.querySelectorAll(".style-filter");
+		if (isScrolledToBottom()) {
+			elements.forEach((element) => element.classList.add("scrolled-bottom"));
+		} else {
+			elements.forEach((element) =>
+				element.classList.remove("scrolled-bottom")
+			);
 		}
 	});
 </script>
