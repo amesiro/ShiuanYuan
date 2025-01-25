@@ -44,6 +44,7 @@ header.invisible {
 	z-index: 110;
 	margin-left: auto;
 	align-items: center;
+	padding: 0;
 }
 
 .hamburger-menu span {
