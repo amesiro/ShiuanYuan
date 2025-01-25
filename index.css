@@ -43,6 +43,7 @@ header.invisible {
 	cursor: pointer;
 	z-index: 110;
 	margin-left: auto;
+	align-items: center;
 }
 
 .hamburger-menu span {
