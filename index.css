@@ -8,6 +8,10 @@ body {
 	font-size: 1rem;
 }
 
+main {
+	max-width: 1920px;
+}
+
 header {
 	background: #44444400;
 	position: fixed;
