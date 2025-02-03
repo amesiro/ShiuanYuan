@@ -10,7 +10,10 @@ body {
 
 main {
 	max-width: 1920px;
+<<<<<<< HEAD
 	margin: 0 auto;
+=======
+>>>>>>> 45dcbba3d31d0c2a3bfb262f8b8a5d7620396911
 }
 
 header {

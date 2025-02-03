@@ -379,9 +379,24 @@
 				});
 
 				function initializeStickyHeader() {
+<<<<<<< HEAD
 					const designProject = document.querySelector(".design-project");
 					const styleFilter = document.querySelector(".style-filter");
 
+=======
+					console.log("Sticky Header Initialization Started");
+
+					const designProject = document.querySelector(".design-project");
+					const styleFilter = document.querySelector(".style-filter");
+
+					if (!designProject || !styleFilter) {
+						console.warn(
+							"designProject or styleFilter element not found in DOM."
+						);
+						return;
+					}
+
+>>>>>>> 45dcbba3d31d0c2a3bfb262f8b8a5d7620396911
 					const designProjectOffsetTop = designProject.offsetTop;
 
 					window.addEventListener("scroll", () => {
@@ -391,6 +406,7 @@
 							styleFilter.classList.remove("sticky");
 						}
 					});
+<<<<<<< HEAD
 				}
 			</script>
 		</main>
@@ -398,6 +414,13 @@
 		<!-- Swiper JS -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="./portfolio.js"></script>
+=======
+
+					console.log("Sticky Header Initialization Completed");
+				}
+			</script>
+		</main>
+>>>>>>> 45dcbba3d31d0c2a3bfb262f8b8a5d7620396911
 	</body>
 </html>
 <style>
