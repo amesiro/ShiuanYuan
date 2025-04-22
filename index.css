@@ -1,5 +1,13 @@
+:root {
+	--title-color: #0070d8;
+	--active-color: #003566;
+	--portfolio-color: #005a9c;
+	--bg-color: #fffbfb;
+}
+
 body {
-	background: #fff4f0;
+	/* background: #fff4f0; 原底色 */
+	background: var(--bg-color);
 	margin: 0;
 	overflow-x: hidden;
 	font-family: "Poppins", sans-serif;
@@ -175,7 +183,7 @@ a.company-title:hover {
 	color: #2e2e2e;
 	font-size: 1.6rem;
 	padding: 0.2rem;
-
+	cursor: pointer;
 	text-shadow: 1px 1px 2px #b0b0b0, -1px -1px 2px #b0b0b0, -1px 1px 2px #b0b0b0,
 		1px -1px 2px #b0b0b0;
 }
@@ -191,6 +199,7 @@ a.company-title:hover {
 	width: 100vw;
 	height: 100vh;
 	object-fit: cover;
+	max-width: 1920px;
 }
 
 .mySwiper .swiper-slide {
@@ -260,7 +269,7 @@ a.company-title:hover {
 .tabs__label {
 	padding: 10px 16px;
 	cursor: pointer;
-	color: #0070d8;
+	color: var(--title-color);
 }
 
 .tabs__radio {
@@ -285,10 +294,14 @@ a.company-title:hover {
 	margin: 0.4rem;
 }
 
+.award-item-year {
+	width: 40px;
+}
+
 .tabs__radio:checked + .tabs__label {
 	font-weight: bold;
-	color: #003566;
-	border-bottom: 2px solid #003566;
+	color: var(--active-color);
+	border-bottom: 2px solid var(--active-color);
 }
 
 .tabs__radio:checked + .tabs__label + .tabs__content {
@@ -321,14 +334,14 @@ a.company-title:hover {
 .portfolio-list {
 	text-align: center;
 	font-weight: 400;
-	color: #0070d8;
+	color: var(--title-color);
 	padding: 1rem;
 }
 
 .style-filter {
 	text-align: center;
 	padding: 1rem;
-	background-color: #fff4f0;
+	background-color: var(--bg-color);
 }
 
 .style-filter.sticky {
@@ -336,7 +349,7 @@ a.company-title:hover {
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: #fff4f0;
+	background-color: var(--bg-color);
 	padding: 0.75rem 0;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	z-index: 99;
@@ -345,7 +358,7 @@ a.company-title:hover {
 .style-filter.sticky.scrolled-up,
 .style-filter.sticky.scrolled-bottom {
 	padding-top: 70px;
-	background-color: #fff4f0;
+	background-color: var(--bg-color);
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -362,7 +375,7 @@ a.company-title:hover {
 	position: relative;
 	min-width: 100px;
 	border: 0;
-	background-color: #fff4f0;
+	background-color: var(--bg-color);
 	color: gray;
 	font-size: 1rem;
 	font-weight: bold;
@@ -372,9 +385,10 @@ a.company-title:hover {
 	overflow: hidden;
 	transition: background 400ms;
 	padding: 10px 20px;
+	cursor: pointer;
 }
 .btn:hover {
-	color: #003566;
+	color: var(--active-color);
 }
 .btn .ripple {
 	position: absolute;
@@ -393,7 +407,7 @@ a.company-title:hover {
 }
 
 .btn-selected {
-	background-color: #fff4f0;
+	background-color: var(--bg-color);
 	color: #2e2e2e;
 }
 
@@ -426,7 +440,7 @@ a.company-title:hover {
 	top: 0;
 	z-index: 10;
 	background-color: rgba(216, 222, 233, 0.85);
-	color: #005a9c;
+	color: var(--portfolio-color);
 	opacity: 0;
 	transition: opacity 0.3s ease;
 	font-size: 1.5rem;
@@ -447,7 +461,7 @@ a.company-title:hover {
 	justify-content: center;
 	text-align: center;
 	position: relative;
-	background-color: #fff4f0;
+	background-color: var(--bg-color);
 	color: #2e2e2e;
 	font-family: "Poppins", sans-serif;
 }
@@ -459,7 +473,7 @@ a.company-title:hover {
 .workflow {
 	text-align: center;
 	font-weight: 400;
-	color: #0070d8;
+	color: var(--title-color);
 }
 
 .workflow__bg {
@@ -472,6 +486,7 @@ a.company-title:hover {
 	opacity: 0;
 	clip-path: polygon(0% 100%, 0% 100%, 0% 100%);
 	transition: opacity 0.5s ease-out;
+	max-width: 1920px;
 }
 
 .workflow__bg.animate {
@@ -641,7 +656,7 @@ a.company-title:hover {
 .workflow-section2 {
 	display: none;
 	height: auto;
-	background-color: #fff4f0;
+	background-color: var(--bg-color);
 	color: #2e2e2e;
 	margin: 0 auto;
 }
@@ -718,7 +733,7 @@ a.company-title:hover {
 	color: white;
 	border: 7px solid #b0b0b0;
 	border-radius: 100%;
-	background-color: #fff4f0;
+	background-color: var(--bg-color);
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -879,6 +894,21 @@ a.company-title:hover {
 	}
 }
 
+.qrcode {
+	margin: 2rem 0;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.qrcode img {
+	margin: 10px;
+	width: 360px;
+	height: 360px;
+	border-radius: 2.5rem;
+}
+
 .contant-info {
 	font-family: "Poppins", sans-serif;
 	font-size: 1.2rem;
@@ -896,7 +926,7 @@ a.company-title:hover {
 	text-align: center;
 	padding-top: 4rem;
 	font-size: 2rem;
-	color: #0070d8;
+	color: var(--title-color);
 	margin: 0;
 }
 
@@ -913,9 +943,10 @@ a.company-title:hover {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #fff4f0;
+	background-color: var(--bg-color);
 	margin: 3rem auto;
 	min-width: 960px;
+	cursor: pointer;
 }
 
 .project-content {
@@ -933,6 +964,18 @@ a.company-title:hover {
 @media screen and (min-width: 1921px) {
 	.image-container {
 		width: 100%;
+	}
+	.award-section {
+		width: 100%;
+	}
+	.latest-works {
+		width: 100%;
+	}
+	.workflow-item-content {
+		width: 800px;
+	}
+	.contant-info {
+		min-height: auto;
 	}
 }
 
